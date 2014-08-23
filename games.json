@@ -1,12 +1,10 @@
-{
-  "master_list" : [
-    {
-      "id" : "0f3032f",
-      "name" : "street fighter 2"
-    },
-    {
-      "id" : "0f32f03",
-      "name" : "capcom vs marvel"
-    }
-  ]
-}
+[
+  {
+    "id" : "0f3032f",
+    "name" : "street fighter 2"
+  },
+  {
+    "id" : "0f32f03",
+    "name" : "capcom vs marvel"
+  }
+]
