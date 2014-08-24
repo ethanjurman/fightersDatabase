@@ -1,9 +1,0 @@
-{
-  "move_types" : {
-    "special" :"yellow",
-    "super" : "red"
-  },
-  "characters" : [
-    "Ken"
-  ]
-}

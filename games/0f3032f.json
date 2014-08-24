@@ -1,0 +1,47 @@
+{
+  "move_types" : {
+    "special" :"yellow",
+    "super" : "red",
+    "super_level_3" : "purple"
+  },
+  "characters" : {
+    "Ryu" : {
+      "name" : "Ryu",
+      "moves" : [
+        {
+          "name" : "Hadouken",
+          "exec" : "qcf + p",
+          "note" : "",
+          "desc" : "\"Fireball\"",
+          "move_type" : "special"
+        },
+        {
+          "name" : "Shin Shoryuken",
+          "exec" : "qcf qcf + k",
+          "note" : "level 3 only",
+          "desc" : "",
+          "move_type" : "super_level_3"
+        }
+      ]
+    },
+    "Ken" : {
+      "name" : "Ken",
+      "moves" : [
+        {
+          "name" : "Hadouken",
+          "exec" : "qcf + p",
+          "note" : "",
+          "desc" : "\"Fireball\"",
+          "move_type" : "special"
+        },
+        {
+          "name" : "Shin Shoryuken",
+          "exec" : "qcf qcf + k",
+          "note" : "level 3 only",
+          "desc" : "",
+          "move_type" : "super_level_3"
+        }
+      ]
+    }
+  }
+}
