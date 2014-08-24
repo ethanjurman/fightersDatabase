@@ -4,7 +4,7 @@
     "super" : "red"
   },
   "characters" : {
-    "Akuma" : {
+    {
       "moves" : [
         {
           "name" : "Hadouken",
@@ -22,7 +22,7 @@
         }
       ]
     },
-    "Dan" : {
+    {
       "moves" : [
         {
           "name" : "Hadouken",

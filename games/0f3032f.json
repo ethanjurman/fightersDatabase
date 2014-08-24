@@ -4,8 +4,8 @@
     "super" : "red",
     "super_level_3" : "purple"
   },
-  "characters" : {
-    "Ryu" : {
+  "characters" : [
+    {
       "name" : "Ryu",
       "moves" : [
         {
@@ -24,7 +24,7 @@
         }
       ]
     },
-    "Ken" : {
+    {
       "name" : "Ken",
       "moves" : [
         {
@@ -43,5 +43,5 @@
         }
       ]
     }
-  }
+  ]
 }
