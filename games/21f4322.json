@@ -5,6 +5,7 @@
   },
   "characters" : {
     {
+      "name" : "Ryu",
       "moves" : [
         {
           "name" : "Hadouken",
@@ -23,6 +24,7 @@
       ]
     },
     {
+      "name" : "Ken",
       "moves" : [
         {
           "name" : "Hadouken",
