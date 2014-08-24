@@ -3,7 +3,7 @@
     "special" :"yellow",
     "super" : "red"
   },
-  "characters" : {
+  "characters" : [
     {
       "name" : "Ryu",
       "moves" : [
@@ -42,5 +42,5 @@
         }
       ]
     }
-  }
+  ]
 }
