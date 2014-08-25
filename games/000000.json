@@ -5,7 +5,7 @@
   },
   "characters" : [
     {
-      "name" : "Akuma",
+      "name" : "Akuma0",
       "moves" : [
         {
           "name" : "Seoi Nage",
@@ -53,11 +53,12 @@
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch"
+          "exec" : "LPunch LPunch right LKick HPunch",
+          "move_type" : "super"
         }
       ]
     },{
-      "name" : "Akuma",
+      "name" : "Akuma1",
       "moves" : [
         {
           "name" : "Seoi Nage",
@@ -105,11 +106,12 @@
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch"
+          "exec" : "LPunch LPunch right LKick HPunch",
+          "move_type" : "super"
         }
       ]
     },{
-      "name" : "Akuma",
+      "name" : "Akuma2",
       "moves" : [
         {
           "name" : "Seoi Nage",
@@ -157,11 +159,12 @@
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch"
+          "exec" : "LPunch LPunch right LKick HPunch",
+          "move_type" : "super"
         }
       ]
     },{
-      "name" : "Akuma",
+      "name" : "Akuma3",
       "moves" : [
         {
           "name" : "Seoi Nage",
@@ -209,11 +212,12 @@
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch"
+          "exec" : "LPunch LPunch right LKick HPunch",
+          "move_type" : "super"
         }
       ]
     },{
-      "name" : "Akuma",
+      "name" : "Akuma4",
       "moves" : [
         {
           "name" : "Seoi Nage",
@@ -261,11 +265,12 @@
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch"
+          "exec" : "LPunch LPunch right LKick HPunch",
+          "move_type" : "super"
         }
       ]
     },{
-      "name" : "Akuma",
+      "name" : "Akuma5",
       "moves" : [
         {
           "name" : "Seoi Nage",
@@ -313,11 +318,12 @@
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch"
+          "exec" : "LPunch LPunch right LKick HPunch",
+          "move_type" : "super"
         }
       ]
     },{
-      "name" : "Akuma",
+      "name" : "Akuma6",
       "moves" : [
         {
           "name" : "Seoi Nage",
@@ -365,11 +371,12 @@
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch"
+          "exec" : "LPunch LPunch right LKick HPunch",
+          "move_type" : "super"
         }
       ]
     },{
-      "name" : "Akuma",
+      "name" : "Akuma7",
       "moves" : [
         {
           "name" : "Seoi Nage",
@@ -417,11 +424,12 @@
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch"
+          "exec" : "LPunch LPunch right LKick HPunch",
+          "move_type" : "super"
         }
       ]
     },{
-      "name" : "Akuma",
+      "name" : "Akuma8",
       "moves" : [
         {
           "name" : "Seoi Nage",
@@ -469,11 +477,12 @@
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch"
+          "exec" : "LPunch LPunch right LKick HPunch",
+          "move_type" : "super"
         }
       ]
     },{
-      "name" : "Akuma",
+      "name" : "Akuma9",
       "moves" : [
         {
           "name" : "Seoi Nage",
@@ -521,11 +530,12 @@
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch"
+          "exec" : "LPunch LPunch right LKick HPunch",
+          "move_type" : "super"
         }
       ]
     },{
-      "name" : "Akuma",
+      "name" : "AkumaA",
       "moves" : [
         {
           "name" : "Seoi Nage",
@@ -573,7 +583,8 @@
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch"
+          "exec" : "LPunch LPunch right LKick HPunch",
+          "move_type" : "super"
         }
       ]
     }
