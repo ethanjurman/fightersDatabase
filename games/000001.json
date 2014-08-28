@@ -2,7 +2,7 @@
   "move_types" : {
     "special" : "green"
   },
-  "character" : [
+  "characters" : [
     {
       "name" : "Ryu",
       "moves" : [
