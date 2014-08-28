@@ -1,0 +1,167 @@
+{
+  "move_types" : {
+    "special" : "green"
+  },
+  "character" : [
+    {
+      "name" : "Ryu",
+      "moves" : [
+        {
+          "name" : "Hadouken",
+          "exec" : "qcf + p",
+          "note" : ""
+        },
+        {
+          "name" : "Shoryuken",
+          "exec" : "dp + p",
+          "note" : ""
+        },
+        {
+          "name" : "Tatsumaki Senpukyaku",
+          "exec" : "qcb + k",
+          "note" : ""
+        },
+      ]
+    },
+    {
+      "name" : "Ken",
+      "moves" : [
+        {
+          "name" : "Hadouken",
+          "exec" : "qcf + p",
+          "note" : ""
+        },
+        {
+          "name" : "Shoryuken",
+          "exec" : "dp + p",
+          "note" : ""
+        },
+        {
+          "name" : "Tatsumaki Senpukyaku",
+          "exec" : "qcb + k",
+          "note" : ""
+        },
+      ]
+    },
+    {
+      "name" : "Chun-Li",
+      "moves" : [
+        {
+          "name" : "Kiko-Ken",
+          "exec" : "hcf + p",
+          "note" : ""
+        },
+        {
+          "name" : "Tenshokyaku",
+          "exec" : "chargeDown up + k",
+          "note" : ""
+        },
+        {
+          "name" : "Hyakuretsukyaku",
+          "exec" : "rapidK",
+          "note" : ""
+        },
+      ]
+    },
+    {
+      "name" : "Dhalsim",
+      "moves" : [
+        {
+          "name" : "Yoga Fire",
+          "exec" : "qcf + p",
+          "note" : ""
+        },
+        {
+          "name" : "Yoga Flame",
+          "exec" : "hcb + p",
+          "note" : ""
+        },
+        {
+          "name" : "Yoga Blast",
+          "exec" : "hcb + k",
+          "note" : ""
+        },
+      ]
+    },
+    {
+      "name" : "Cody",
+      "moves" : [
+        {
+          "name" : "Criminal Upper",
+          "exec" : "qcb + p",
+          "note" : ""
+        },
+        {
+          "name" : "Raffian Kick",
+          "exec" : "qcf + k",
+          "note" : ""
+        },
+        {
+          "name" : "Cheap Shot",
+          "exec" : "qcf + p",
+          "note" : ""
+        },
+      ]
+    },
+    {
+      "name" : "R.Mika",
+      "moves" : [
+        {
+          "name" : "Flying Backdrop",
+          "exec" : "qcb + p",
+          "note" : ""
+        },
+        {
+          "name" : "Headlock Slam",
+          "exec" : "fcb + rapidK",
+          "note" : ""
+        },
+        {
+          "name" : "Double Neck Breaker",
+          "exec" : "fcb + p",
+          "note" : ""
+        },
+      ]
+    },
+    {
+      "name" : "Vega",
+      "moves" : [
+        {
+          "name" : "Flying Barcelona Attack",
+          "exec" : "chargeDown up + k",
+          "note" : "after jumping from the wall (p)"
+        },
+        {
+          "name" : "Izuna Drop",
+          "exec" : "chargeDown up + k",
+          "note" : "Then near the oppenent (down + p)"
+        },
+        {
+          "name" : "Rolling Crystal Flash",
+          "exec" : "chargeBack right + p",
+          "note" : ""
+        },
+      ]
+    },
+    {
+      "name" : "Karin",
+      "moves" : [
+        {
+          "name" : "Gurenken",
+          "exec" : "qcf + p",
+          "note" : ""
+        },
+        {
+          "name" : "Mujinkyaku",
+          "exec" : "dp + k",
+          "note" : ""
+        },
+        {
+          "name" : "Houshou",
+          "exec" : "dp + p",
+          "note" : ""
+        },
+      ]
+    },
+  ]
+}
