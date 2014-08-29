@@ -17,7 +17,7 @@
         {
           "name" : "Tatsumaki Senpukyaku",
           "exec" : "qcb + k"
-        },
+        }
       ]
     },
     {
@@ -34,7 +34,7 @@
         {
           "name" : "Tatsumaki Senpukyaku",
           "exec" : "qcb + k"
-        },
+        }
       ]
     },
     {
@@ -51,7 +51,7 @@
         {
           "name" : "Hyakuretsukyaku",
           "exec" : "rapidK"
-        },
+        }
       ]
     },
     {
@@ -68,7 +68,7 @@
         {
           "name" : "Yoga Blast",
           "exec" : "hcb + k"
-        },
+        }
       ]
     },
     {
@@ -85,7 +85,7 @@
         {
           "name" : "Cheap Shot",
           "exec" : "qcf + p"
-        },
+        }
       ]
     },
     {
@@ -102,7 +102,7 @@
         {
           "name" : "Double Neck Breaker",
           "exec" : "fcb + p"
-        },
+        }
       ]
     },
     {
@@ -121,7 +121,7 @@
         {
           "name" : "Rolling Crystal Flash",
           "exec" : "chargeBack right + p"
-        },
+        }
       ]
     },
     {
@@ -138,7 +138,7 @@
         {
           "name" : "Houshou",
           "exec" : "dp + p"
-        },
+        }
       ]
     },
   ]
