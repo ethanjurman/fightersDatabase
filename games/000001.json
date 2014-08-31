@@ -1,6 +1,7 @@
 {
   "move_types" : {
-    "special" : "green"
+    "special" : "green",
+    "super combo" : "red"
   },
   "characters" : [
     {
@@ -34,6 +35,12 @@
         {
           "name" : "Tatsumaki Senpukyaku",
           "exec" : "[qcb] + [k]"
+        },
+        {
+          "name" : "Shippu Jinraikyaku",
+          "exec" : "[qcb] [qcb] + [k]",
+          "prereq" : "a-ism",
+          "move-type" : "super combo"
         }
       ]
     },
@@ -51,6 +58,11 @@
         {
           "name" : "Hyakuretsukyaku",
           "exec" : "[rapidK]"
+        },
+        {
+          "name" : "Spinning Bird Kick",
+          "exec" : "[chargeBack] [right] + [k]",
+          "prereq" : "x-ism"
         }
       ]
     },
@@ -85,6 +97,11 @@
         {
           "name" : "Cheap Shot",
           "exec" : "[qcf] + [p]"
+        },
+        {
+          "name" : "Bad Spray",
+          "exec" : "[back] [backDown] [down] + [p]",
+          "prereq" : "a-ism & v-ism"
         }
       ]
     },
