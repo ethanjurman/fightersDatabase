@@ -8,15 +8,15 @@
       "moves" : [
         {
           "name" : "Hadouken",
-          "exec" : "qcf + p"
+          "exec" : "[qcf] + [p]"
         },
         {
           "name" : "Shoryuken",
-          "exec" : "dp + p"
+          "exec" : "[dp] + [p]"
         },
         {
           "name" : "Tatsumaki Senpukyaku",
-          "exec" : "qcb + k"
+          "exec" : "[qcb] + [k]"
         }
       ]
     },
@@ -25,15 +25,15 @@
       "moves" : [
         {
           "name" : "Hadouken",
-          "exec" : "qcf + p"
+          "exec" : "[qcf] + [p]"
         },
         {
           "name" : "Shoryuken",
-          "exec" : "dp + p"
+          "exec" : "[dp] + [p]"
         },
         {
           "name" : "Tatsumaki Senpukyaku",
-          "exec" : "qcb + k"
+          "exec" : "[qcb] + [k]"
         }
       ]
     },
@@ -42,15 +42,15 @@
       "moves" : [
         {
           "name" : "Kiko-Ken",
-          "exec" : "hcf + p"
+          "exec" : "[hcf] + [p]"
         },
         {
           "name" : "Tenshokyaku",
-          "exec" : "chargeDown up + k"
+          "exec" : "[chargeDown] [up] + [k]"
         },
         {
           "name" : "Hyakuretsukyaku",
-          "exec" : "rapidK"
+          "exec" : "[rapidK]"
         }
       ]
     },
@@ -59,15 +59,15 @@
       "moves" : [
         {
           "name" : "Yoga Fire",
-          "exec" : "qcf + p"
+          "exec" : "[qcf] + [p]"
         },
         {
           "name" : "Yoga Flame",
-          "exec" : "hcb + p"
+          "exec" : "[hcb] + [p]"
         },
         {
           "name" : "Yoga Blast",
-          "exec" : "hcb + k"
+          "exec" : "[hcb] + [k]"
         }
       ]
     },
@@ -76,15 +76,15 @@
       "moves" : [
         {
           "name" : "Criminal Upper",
-          "exec" : "qcb + p"
+          "exec" : "[qcb] + [p]"
         },
         {
           "name" : "Raffian Kick",
-          "exec" : "qcf + k"
+          "exec" : "[qcf] + [k]"
         },
         {
           "name" : "Cheap Shot",
-          "exec" : "qcf + p"
+          "exec" : "[qcf] + [p]"
         }
       ]
     },
@@ -93,15 +93,15 @@
       "moves" : [
         {
           "name" : "Flying Backdrop",
-          "exec" : "qcb + p"
+          "exec" : "[qcb] + [p]"
         },
         {
           "name" : "Headlock Slam",
-          "exec" : "fcb + rapidK"
+          "exec" : "[fcb] + [rapidK]"
         },
         {
           "name" : "Double Neck Breaker",
-          "exec" : "fcb + p"
+          "exec" : "[fcb] + [p]"
         }
       ]
     },
@@ -110,17 +110,17 @@
       "moves" : [
         {
           "name" : "Flying Barcelona Attack",
-          "exec" : "chargeDown up + k",
-          "note" : "after jumping from the wall (p)"
+          "exec" : "[chargeDown] [up] + [k]",
+          "note" : "after jumping from the wall [p]"
         },
         {
           "name" : "Izuna Drop",
-          "exec" : "chargeDown up + k",
-          "note" : "Then near the oppenent (down + p)"
+          "exec" : "[chargeDown] [up] + [k]",
+          "note" : "Then near the oppenent [down] + [p]"
         },
         {
           "name" : "Rolling Crystal Flash",
-          "exec" : "chargeBack right + p"
+          "exec" : "[chargeBack] [right] + [p]"
         }
       ]
     },
@@ -129,15 +129,15 @@
       "moves" : [
         {
           "name" : "Gurenken",
-          "exec" : "qcf + p"
+          "exec" : "[qcf] + [p]"
         },
         {
           "name" : "Mujinkyaku",
-          "exec" : "dp + k"
+          "exec" : "[dp] + [k]"
         },
         {
           "name" : "Houshou",
-          "exec" : "dp + p"
+          "exec" : "[dp] + [p]"
         }
       ]
     }

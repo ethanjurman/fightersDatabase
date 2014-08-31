@@ -9,591 +9,765 @@
       "moves" : [
         {
           "name" : "Seoi Nage",
-          "exec" : "left or right + MPunch or HPunch",
+          "exec" : "[left] or [right] + [MPunch] or [HPunch]",
           "note" : "close"
         },
         {
           "name" : "Tomoe Nage",
-          "exec" : "left or right + MKick or HKick",
+          "exec" : "[left] or [right] + [MKick] or [HKick]",
           "note" : "close"
         },
         {
           "name" : "Gou Hadouken",
-          "exec" : "qcf + Punch"
+          "exec" : "[qcf] + [Punch]"
         },
         {
           "name" : "Zankuu Hadouken",
-          "exec" : "qcf + Punch",
+          "exec" : "[qcf] + [Punch]",
           "note" : "air"
         },
         {
           "name" : "Shakunetsu Hadouken",
-          "exec" : "qcb + Punch"
+          "exec" : "[qcb] + [Punch]"
         },
         {
           "name" : "Gou Shoryuken",
-          "exec" : "dp + Punch"
+          "exec" : "[dp] + [Punch]"
         },
         {
           "name" : "Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick"
+          "exec" : "[qcb] + [Kick]"
         },
         {
           "name" : "Kuuchuu Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick",
+          "exec" : "[qcb] + [Kick]",
           "note" : "air"
         },
         {
           "name" : "Ashura Senkuu Forward",
-          "exec" : "dp + 2xPunch or 2xKick"
+          "exec" : "[dp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Ashura Senkuu Backward",
-          "exec" : "rdp + 2xPunch or 2xKick"
+          "exec" : "[rdp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch",
+          "exec" : "[LPunch] [LPunch] [right] [LKick] [HPunch]",
           "move_type" : "super"
         }
       ]
     },
+
     {
       "name" : "Akuma1",
       "moves" : [
         {
           "name" : "Seoi Nage",
-          "exec" : "left or right + MPunch or HPunch",
+          "exec" : "[left] or [right] + [MPunch] or [HPunch]",
           "note" : "close"
         },
         {
           "name" : "Tomoe Nage",
-          "exec" : "left or right + MKick or HKick",
+          "exec" : "[left] or [right] + [MKick] or [HKick]",
           "note" : "close"
         },
         {
           "name" : "Gou Hadouken",
-          "exec" : "qcf + Punch"
+          "exec" : "[qcf] + [Punch]"
         },
         {
           "name" : "Zankuu Hadouken",
-          "exec" : "qcf + Punch",
+          "exec" : "[qcf] + [Punch]",
           "note" : "air"
         },
         {
           "name" : "Shakunetsu Hadouken",
-          "exec" : "qcb + Punch"
+          "exec" : "[qcb] + [Punch]"
         },
         {
           "name" : "Gou Shoryuken",
-          "exec" : "dp + Punch"
+          "exec" : "[dp] + [Punch]"
         },
         {
           "name" : "Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick"
+          "exec" : "[qcb] + [Kick]"
         },
         {
           "name" : "Kuuchuu Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick",
+          "exec" : "[qcb] + [Kick]",
           "note" : "air"
         },
         {
           "name" : "Ashura Senkuu Forward",
-          "exec" : "dp + 2xPunch or 2xKick"
+          "exec" : "[dp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Ashura Senkuu Backward",
-          "exec" : "rdp + 2xPunch or 2xKick"
+          "exec" : "[rdp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch",
+          "exec" : "[LPunch] [LPunch] [right] [LKick] [HPunch]",
           "move_type" : "super"
         }
       ]
     },
+
     {
       "name" : "Akuma2",
       "moves" : [
         {
           "name" : "Seoi Nage",
-          "exec" : "left or right + MPunch or HPunch",
+          "exec" : "[left] or [right] + [MPunch] or [HPunch]",
           "note" : "close"
         },
         {
           "name" : "Tomoe Nage",
-          "exec" : "left or right + MKick or HKick",
+          "exec" : "[left] or [right] + [MKick] or [HKick]",
           "note" : "close"
         },
         {
           "name" : "Gou Hadouken",
-          "exec" : "qcf + Punch"
+          "exec" : "[qcf] + [Punch]"
         },
         {
           "name" : "Zankuu Hadouken",
-          "exec" : "qcf + Punch",
+          "exec" : "[qcf] + [Punch]",
           "note" : "air"
         },
         {
           "name" : "Shakunetsu Hadouken",
-          "exec" : "qcb + Punch"
+          "exec" : "[qcb] + [Punch]"
         },
         {
           "name" : "Gou Shoryuken",
-          "exec" : "dp + Punch"
+          "exec" : "[dp] + [Punch]"
         },
         {
           "name" : "Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick"
+          "exec" : "[qcb] + [Kick]"
         },
         {
           "name" : "Kuuchuu Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick",
+          "exec" : "[qcb] + [Kick]",
           "note" : "air"
         },
         {
           "name" : "Ashura Senkuu Forward",
-          "exec" : "dp + 2xPunch or 2xKick"
+          "exec" : "[dp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Ashura Senkuu Backward",
-          "exec" : "rdp + 2xPunch or 2xKick"
+          "exec" : "[rdp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch",
+          "exec" : "[LPunch] [LPunch] [right] [LKick] [HPunch]",
           "move_type" : "super"
         }
       ]
     },
+
     {
       "name" : "Akuma3",
       "moves" : [
         {
           "name" : "Seoi Nage",
-          "exec" : "left or right + MPunch or HPunch",
+          "exec" : "[left] or [right] + [MPunch] or [HPunch]",
           "note" : "close"
         },
         {
           "name" : "Tomoe Nage",
-          "exec" : "left or right + MKick or HKick",
+          "exec" : "[left] or [right] + [MKick] or [HKick]",
           "note" : "close"
         },
         {
           "name" : "Gou Hadouken",
-          "exec" : "qcf + Punch"
+          "exec" : "[qcf] + [Punch]"
         },
         {
           "name" : "Zankuu Hadouken",
-          "exec" : "qcf + Punch",
+          "exec" : "[qcf] + [Punch]",
           "note" : "air"
         },
         {
           "name" : "Shakunetsu Hadouken",
-          "exec" : "qcb + Punch"
+          "exec" : "[qcb] + [Punch]"
         },
         {
           "name" : "Gou Shoryuken",
-          "exec" : "dp + Punch"
+          "exec" : "[dp] + [Punch]"
         },
         {
           "name" : "Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick"
+          "exec" : "[qcb] + [Kick]"
         },
         {
           "name" : "Kuuchuu Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick",
+          "exec" : "[qcb] + [Kick]",
           "note" : "air"
         },
         {
           "name" : "Ashura Senkuu Forward",
-          "exec" : "dp + 2xPunch or 2xKick"
+          "exec" : "[dp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Ashura Senkuu Backward",
-          "exec" : "rdp + 2xPunch or 2xKick"
+          "exec" : "[rdp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch",
+          "exec" : "[LPunch] [LPunch] [right] [LKick] [HPunch]",
           "move_type" : "super"
         }
       ]
     },
+
     {
       "name" : "Akuma4",
       "moves" : [
         {
           "name" : "Seoi Nage",
-          "exec" : "left or right + MPunch or HPunch",
+          "exec" : "[left] or [right] + [MPunch] or [HPunch]",
           "note" : "close"
         },
         {
           "name" : "Tomoe Nage",
-          "exec" : "left or right + MKick or HKick",
+          "exec" : "[left] or [right] + [MKick] or [HKick]",
           "note" : "close"
         },
         {
           "name" : "Gou Hadouken",
-          "exec" : "qcf + Punch"
+          "exec" : "[qcf] + [Punch]"
         },
         {
           "name" : "Zankuu Hadouken",
-          "exec" : "qcf + Punch",
+          "exec" : "[qcf] + [Punch]",
           "note" : "air"
         },
         {
           "name" : "Shakunetsu Hadouken",
-          "exec" : "qcb + Punch"
+          "exec" : "[qcb] + [Punch]"
         },
         {
           "name" : "Gou Shoryuken",
-          "exec" : "dp + Punch"
+          "exec" : "[dp] + [Punch]"
         },
         {
           "name" : "Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick"
+          "exec" : "[qcb] + [Kick]"
         },
         {
           "name" : "Kuuchuu Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick",
+          "exec" : "[qcb] + [Kick]",
           "note" : "air"
         },
         {
           "name" : "Ashura Senkuu Forward",
-          "exec" : "dp + 2xPunch or 2xKick"
+          "exec" : "[dp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Ashura Senkuu Backward",
-          "exec" : "rdp + 2xPunch or 2xKick"
+          "exec" : "[rdp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch",
+          "exec" : "[LPunch] [LPunch] [right] [LKick] [HPunch]",
           "move_type" : "super"
         }
       ]
     },
+
     {
       "name" : "Akuma5",
       "moves" : [
         {
           "name" : "Seoi Nage",
-          "exec" : "left or right + MPunch or HPunch",
+          "exec" : "[left] or [right] + [MPunch] or [HPunch]",
           "note" : "close"
         },
         {
           "name" : "Tomoe Nage",
-          "exec" : "left or right + MKick or HKick",
+          "exec" : "[left] or [right] + [MKick] or [HKick]",
           "note" : "close"
         },
         {
           "name" : "Gou Hadouken",
-          "exec" : "qcf + Punch"
+          "exec" : "[qcf] + [Punch]"
         },
         {
           "name" : "Zankuu Hadouken",
-          "exec" : "qcf + Punch",
+          "exec" : "[qcf] + [Punch]",
           "note" : "air"
         },
         {
           "name" : "Shakunetsu Hadouken",
-          "exec" : "qcb + Punch"
+          "exec" : "[qcb] + [Punch]"
         },
         {
           "name" : "Gou Shoryuken",
-          "exec" : "dp + Punch"
+          "exec" : "[dp] + [Punch]"
         },
         {
           "name" : "Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick"
+          "exec" : "[qcb] + [Kick]"
         },
         {
           "name" : "Kuuchuu Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick",
+          "exec" : "[qcb] + [Kick]",
           "note" : "air"
         },
         {
           "name" : "Ashura Senkuu Forward",
-          "exec" : "dp + 2xPunch or 2xKick"
+          "exec" : "[dp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Ashura Senkuu Backward",
-          "exec" : "rdp + 2xPunch or 2xKick"
+          "exec" : "[rdp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch",
+          "exec" : "[LPunch] [LPunch] [right] [LKick] [HPunch]",
           "move_type" : "super"
         }
       ]
     },
+
     {
       "name" : "Akuma6",
       "moves" : [
         {
           "name" : "Seoi Nage",
-          "exec" : "left or right + MPunch or HPunch",
+          "exec" : "[left] or [right] + [MPunch] or [HPunch]",
           "note" : "close"
         },
         {
           "name" : "Tomoe Nage",
-          "exec" : "left or right + MKick or HKick",
+          "exec" : "[left] or [right] + [MKick] or [HKick]",
           "note" : "close"
         },
         {
           "name" : "Gou Hadouken",
-          "exec" : "qcf + Punch"
+          "exec" : "[qcf] + [Punch]"
         },
         {
           "name" : "Zankuu Hadouken",
-          "exec" : "qcf + Punch",
+          "exec" : "[qcf] + [Punch]",
           "note" : "air"
         },
         {
           "name" : "Shakunetsu Hadouken",
-          "exec" : "qcb + Punch"
+          "exec" : "[qcb] + [Punch]"
         },
         {
           "name" : "Gou Shoryuken",
-          "exec" : "dp + Punch"
+          "exec" : "[dp] + [Punch]"
         },
         {
           "name" : "Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick"
+          "exec" : "[qcb] + [Kick]"
         },
         {
           "name" : "Kuuchuu Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick",
+          "exec" : "[qcb] + [Kick]",
           "note" : "air"
         },
         {
           "name" : "Ashura Senkuu Forward",
-          "exec" : "dp + 2xPunch or 2xKick"
+          "exec" : "[dp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Ashura Senkuu Backward",
-          "exec" : "rdp + 2xPunch or 2xKick"
+          "exec" : "[rdp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch",
+          "exec" : "[LPunch] [LPunch] [right] [LKick] [HPunch]",
           "move_type" : "super"
         }
       ]
     },
     {
-      "name" : "Akuma7",
+      "name" : "Akuma0a",
       "moves" : [
         {
           "name" : "Seoi Nage",
-          "exec" : "left or right + MPunch or HPunch",
+          "exec" : "[left] or [right] + [MPunch] or [HPunch]",
           "note" : "close"
         },
         {
           "name" : "Tomoe Nage",
-          "exec" : "left or right + MKick or HKick",
+          "exec" : "[left] or [right] + [MKick] or [HKick]",
           "note" : "close"
         },
         {
           "name" : "Gou Hadouken",
-          "exec" : "qcf + Punch"
+          "exec" : "[qcf] + [Punch]"
         },
         {
           "name" : "Zankuu Hadouken",
-          "exec" : "qcf + Punch",
+          "exec" : "[qcf] + [Punch]",
           "note" : "air"
         },
         {
           "name" : "Shakunetsu Hadouken",
-          "exec" : "qcb + Punch"
+          "exec" : "[qcb] + [Punch]"
         },
         {
           "name" : "Gou Shoryuken",
-          "exec" : "dp + Punch"
+          "exec" : "[dp] + [Punch]"
         },
         {
           "name" : "Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick"
+          "exec" : "[qcb] + [Kick]"
         },
         {
           "name" : "Kuuchuu Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick",
+          "exec" : "[qcb] + [Kick]",
           "note" : "air"
         },
         {
           "name" : "Ashura Senkuu Forward",
-          "exec" : "dp + 2xPunch or 2xKick"
+          "exec" : "[dp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Ashura Senkuu Backward",
-          "exec" : "rdp + 2xPunch or 2xKick"
+          "exec" : "[rdp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch",
+          "exec" : "[LPunch] [LPunch] [right] [LKick] [HPunch]",
           "move_type" : "super"
         }
       ]
     },
+
     {
-      "name" : "Akuma8",
+      "name" : "Akuma1a",
       "moves" : [
         {
           "name" : "Seoi Nage",
-          "exec" : "left or right + MPunch or HPunch",
+          "exec" : "[left] or [right] + [MPunch] or [HPunch]",
           "note" : "close"
         },
         {
           "name" : "Tomoe Nage",
-          "exec" : "left or right + MKick or HKick",
+          "exec" : "[left] or [right] + [MKick] or [HKick]",
           "note" : "close"
         },
         {
           "name" : "Gou Hadouken",
-          "exec" : "qcf + Punch"
+          "exec" : "[qcf] + [Punch]"
         },
         {
           "name" : "Zankuu Hadouken",
-          "exec" : "qcf + Punch",
+          "exec" : "[qcf] + [Punch]",
           "note" : "air"
         },
         {
           "name" : "Shakunetsu Hadouken",
-          "exec" : "qcb + Punch"
+          "exec" : "[qcb] + [Punch]"
         },
         {
           "name" : "Gou Shoryuken",
-          "exec" : "dp + Punch"
+          "exec" : "[dp] + [Punch]"
         },
         {
           "name" : "Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick"
+          "exec" : "[qcb] + [Kick]"
         },
         {
           "name" : "Kuuchuu Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick",
+          "exec" : "[qcb] + [Kick]",
           "note" : "air"
         },
         {
           "name" : "Ashura Senkuu Forward",
-          "exec" : "dp + 2xPunch or 2xKick"
+          "exec" : "[dp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Ashura Senkuu Backward",
-          "exec" : "rdp + 2xPunch or 2xKick"
+          "exec" : "[rdp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch",
+          "exec" : "[LPunch] [LPunch] [right] [LKick] [HPunch]",
           "move_type" : "super"
         }
       ]
     },
+
     {
-      "name" : "Akuma9",
+      "name" : "Akuma2a",
       "moves" : [
         {
           "name" : "Seoi Nage",
-          "exec" : "left or right + MPunch or HPunch",
+          "exec" : "[left] or [right] + [MPunch] or [HPunch]",
           "note" : "close"
         },
         {
           "name" : "Tomoe Nage",
-          "exec" : "left or right + MKick or HKick",
+          "exec" : "[left] or [right] + [MKick] or [HKick]",
           "note" : "close"
         },
         {
           "name" : "Gou Hadouken",
-          "exec" : "qcf + Punch"
+          "exec" : "[qcf] + [Punch]"
         },
         {
           "name" : "Zankuu Hadouken",
-          "exec" : "qcf + Punch",
+          "exec" : "[qcf] + [Punch]",
           "note" : "air"
         },
         {
           "name" : "Shakunetsu Hadouken",
-          "exec" : "qcb + Punch"
+          "exec" : "[qcb] + [Punch]"
         },
         {
           "name" : "Gou Shoryuken",
-          "exec" : "dp + Punch"
+          "exec" : "[dp] + [Punch]"
         },
         {
           "name" : "Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick"
+          "exec" : "[qcb] + [Kick]"
         },
         {
           "name" : "Kuuchuu Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick",
+          "exec" : "[qcb] + [Kick]",
           "note" : "air"
         },
         {
           "name" : "Ashura Senkuu Forward",
-          "exec" : "dp + 2xPunch or 2xKick"
+          "exec" : "[dp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Ashura Senkuu Backward",
-          "exec" : "rdp + 2xPunch or 2xKick"
+          "exec" : "[rdp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch",
+          "exec" : "[LPunch] [LPunch] [right] [LKick] [HPunch]",
           "move_type" : "super"
         }
       ]
     },
+
     {
-      "name" : "AkumaA",
+      "name" : "Akuma3a",
       "moves" : [
         {
           "name" : "Seoi Nage",
-          "exec" : "left or right + MPunch or HPunch",
+          "exec" : "[left] or [right] + [MPunch] or [HPunch]",
           "note" : "close"
         },
         {
           "name" : "Tomoe Nage",
-          "exec" : "left or right + MKick or HKick",
+          "exec" : "[left] or [right] + [MKick] or [HKick]",
           "note" : "close"
         },
         {
           "name" : "Gou Hadouken",
-          "exec" : "qcf + Punch"
+          "exec" : "[qcf] + [Punch]"
         },
         {
           "name" : "Zankuu Hadouken",
-          "exec" : "qcf + Punch",
+          "exec" : "[qcf] + [Punch]",
           "note" : "air"
         },
         {
           "name" : "Shakunetsu Hadouken",
-          "exec" : "qcb + Punch"
+          "exec" : "[qcb] + [Punch]"
         },
         {
           "name" : "Gou Shoryuken",
-          "exec" : "dp + Punch"
+          "exec" : "[dp] + [Punch]"
         },
         {
           "name" : "Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick"
+          "exec" : "[qcb] + [Kick]"
         },
         {
           "name" : "Kuuchuu Tatsumaki Zankuukyaku",
-          "exec" : "qcb + Kick",
+          "exec" : "[qcb] + [Kick]",
           "note" : "air"
         },
         {
           "name" : "Ashura Senkuu Forward",
-          "exec" : "dp + 2xPunch or 2xKick"
+          "exec" : "[dp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Ashura Senkuu Backward",
-          "exec" : "rdp + 2xPunch or 2xKick"
+          "exec" : "[rdp] + [2xPunch] or [2xKick]"
         },
         {
           "name" : "Shun Goku Satsu",
-          "exec" : "LPunch LPunch right LKick HPunch",
+          "exec" : "[LPunch] [LPunch] [right] [LKick] [HPunch]",
+          "move_type" : "super"
+        }
+      ]
+    },
+
+    {
+      "name" : "Akuma4a",
+      "moves" : [
+        {
+          "name" : "Seoi Nage",
+          "exec" : "[left] or [right] + [MPunch] or [HPunch]",
+          "note" : "close"
+        },
+        {
+          "name" : "Tomoe Nage",
+          "exec" : "[left] or [right] + [MKick] or [HKick]",
+          "note" : "close"
+        },
+        {
+          "name" : "Gou Hadouken",
+          "exec" : "[qcf] + [Punch]"
+        },
+        {
+          "name" : "Zankuu Hadouken",
+          "exec" : "[qcf] + [Punch]",
+          "note" : "air"
+        },
+        {
+          "name" : "Shakunetsu Hadouken",
+          "exec" : "[qcb] + [Punch]"
+        },
+        {
+          "name" : "Gou Shoryuken",
+          "exec" : "[dp] + [Punch]"
+        },
+        {
+          "name" : "Tatsumaki Zankuukyaku",
+          "exec" : "[qcb] + [Kick]"
+        },
+        {
+          "name" : "Kuuchuu Tatsumaki Zankuukyaku",
+          "exec" : "[qcb] + [Kick]",
+          "note" : "air"
+        },
+        {
+          "name" : "Ashura Senkuu Forward",
+          "exec" : "[dp] + [2xPunch] or [2xKick]"
+        },
+        {
+          "name" : "Ashura Senkuu Backward",
+          "exec" : "[rdp] + [2xPunch] or [2xKick]"
+        },
+        {
+          "name" : "Shun Goku Satsu",
+          "exec" : "[LPunch] [LPunch] [right] [LKick] [HPunch]",
+          "move_type" : "super"
+        }
+      ]
+    },
+
+    {
+      "name" : "Akuma5a",
+      "moves" : [
+        {
+          "name" : "Seoi Nage",
+          "exec" : "[left] or [right] + [MPunch] or [HPunch]",
+          "note" : "close"
+        },
+        {
+          "name" : "Tomoe Nage",
+          "exec" : "[left] or [right] + [MKick] or [HKick]",
+          "note" : "close"
+        },
+        {
+          "name" : "Gou Hadouken",
+          "exec" : "[qcf] + [Punch]"
+        },
+        {
+          "name" : "Zankuu Hadouken",
+          "exec" : "[qcf] + [Punch]",
+          "note" : "air"
+        },
+        {
+          "name" : "Shakunetsu Hadouken",
+          "exec" : "[qcb] + [Punch]"
+        },
+        {
+          "name" : "Gou Shoryuken",
+          "exec" : "[dp] + [Punch]"
+        },
+        {
+          "name" : "Tatsumaki Zankuukyaku",
+          "exec" : "[qcb] + [Kick]"
+        },
+        {
+          "name" : "Kuuchuu Tatsumaki Zankuukyaku",
+          "exec" : "[qcb] + [Kick]",
+          "note" : "air"
+        },
+        {
+          "name" : "Ashura Senkuu Forward",
+          "exec" : "[dp] + [2xPunch] or [2xKick]"
+        },
+        {
+          "name" : "Ashura Senkuu Backward",
+          "exec" : "[rdp] + [2xPunch] or [2xKick]"
+        },
+        {
+          "name" : "Shun Goku Satsu",
+          "exec" : "[LPunch] [LPunch] [right] [LKick] [HPunch]",
+          "move_type" : "super"
+        }
+      ]
+    },
+
+    {
+      "name" : "Akuma6a",
+      "moves" : [
+        {
+          "name" : "Seoi Nage",
+          "exec" : "[left] or [right] + [MPunch] or [HPunch]",
+          "note" : "close"
+        },
+        {
+          "name" : "Tomoe Nage",
+          "exec" : "[left] or [right] + [MKick] or [HKick]",
+          "note" : "close"
+        },
+        {
+          "name" : "Gou Hadouken",
+          "exec" : "[qcf] + [Punch]"
+        },
+        {
+          "name" : "Zankuu Hadouken",
+          "exec" : "[qcf] + [Punch]",
+          "note" : "air"
+        },
+        {
+          "name" : "Shakunetsu Hadouken",
+          "exec" : "[qcb] + [Punch]"
+        },
+        {
+          "name" : "Gou Shoryuken",
+          "exec" : "[dp] + [Punch]"
+        },
+        {
+          "name" : "Tatsumaki Zankuukyaku",
+          "exec" : "[qcb] + [Kick]"
+        },
+        {
+          "name" : "Kuuchuu Tatsumaki Zankuukyaku",
+          "exec" : "[qcb] + [Kick]",
+          "note" : "air"
+        },
+        {
+          "name" : "Ashura Senkuu Forward",
+          "exec" : "[dp] + [2xPunch] or [2xKick]"
+        },
+        {
+          "name" : "Ashura Senkuu Backward",
+          "exec" : "[rdp] + [2xPunch] or [2xKick]"
+        },
+        {
+          "name" : "Shun Goku Satsu",
+          "exec" : "[LPunch] [LPunch] [right] [LKick] [HPunch]",
           "move_type" : "super"
         }
       ]
