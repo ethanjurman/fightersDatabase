@@ -40,7 +40,7 @@
           "name" : "Shippu Jinraikyaku",
           "exec" : "[qcb] [qcb] + [k]",
           "prereq" : "a-ism",
-          "move-type" : "super combo"
+          "move_type" : "super combo"
         }
       ]
     },
