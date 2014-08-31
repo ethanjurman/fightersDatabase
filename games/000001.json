@@ -120,7 +120,7 @@
         },
         {
           "name" : "Rolling Crystal Flash",
-          "exec" : "[chargeBack] [right] + [p]"
+          "exec" : "[chargeBack] [forward] + [p]"
         }
       ]
     },
