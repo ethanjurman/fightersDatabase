@@ -126,14 +126,17 @@
       "name" : "Vega",
       "moves" : [
         {
-          "name" : "Flying Barcelona Attack",
-          "exec" : "[chargeDown] [up] + [k]",
-          "note" : "after jumping from the wall [p]"
+          "name" : "Sankaku Tobi",
+          "exec" : "press in opposite direction",
+          "prereq" : "Jump against a wall"
+        }
+        {
+          "name" : "Cosmic Smart",
+          "exec" : "[forward] + [highKick]"
         },
         {
           "name" : "Izuna Drop",
-          "exec" : "[chargeDown] [up] + [k]",
-          "note" : "Then near the oppenent [down] + [p]"
+          "exec" : "[chargeDown] [up] + [k]"
         },
         {
           "name" : "Rolling Crystal Flash",
