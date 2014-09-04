@@ -129,7 +129,7 @@
           "name" : "Sankaku Tobi",
           "exec" : "press in opposite direction",
           "prereq" : "Jump against a wall"
-        }
+        },
         {
           "name" : "Cosmic Smart",
           "exec" : "[forward] + [highKick]"
