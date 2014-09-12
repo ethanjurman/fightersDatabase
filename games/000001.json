@@ -61,7 +61,7 @@
         },
         {
           "name" : "Spinning Bird Kick",
-          "exec" : "<[back] Hold> [right] + [k]",
+          "exec" : "<[back] Hold> [forward] + [k]",
           "prereq" : "x-ism"
         }
       ]
