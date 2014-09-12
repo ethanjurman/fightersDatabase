@@ -57,7 +57,7 @@
         },
         {
           "name" : "Hyakuretsukyaku",
-          "exec" : "[rapidK]"
+          "exec" : "<rapid [K]>"
         },
         {
           "name" : "Spinning Bird Kick",
@@ -100,7 +100,7 @@
         },
         {
           "name" : "Bad Spray",
-          "exec" : "[back] [backDown] [down] + [p]",
+          "exec" : "[back] [downBack] [down] + [p]",
           "prereq" : "a-ism & v-ism"
         }
       ]
@@ -114,11 +114,11 @@
         },
         {
           "name" : "Headlock Slam",
-          "exec" : "[fcb] + [rapidK]"
+          "exec" : "[360] + <Rapid [K]>"
         },
         {
           "name" : "Double Neck Breaker",
-          "exec" : "[fcb] + [p]"
+          "exec" : "[360] + [p]"
         }
       ]
     },
