@@ -53,7 +53,7 @@
         },
         {
           "name" : "Tenshokyaku",
-          "exec" : "[chargeDown] [up] + [k]"
+          "exec" : "<[down] Hold> [up] + [k]"
         },
         {
           "name" : "Hyakuretsukyaku",
@@ -61,7 +61,7 @@
         },
         {
           "name" : "Spinning Bird Kick",
-          "exec" : "[chargeBack] [right] + [k]",
+          "exec" : "<[back] Hold> [right] + [k]",
           "prereq" : "x-ism"
         }
       ]
@@ -136,11 +136,11 @@
         },
         {
           "name" : "Izuna Drop",
-          "exec" : "[chargeDown] [up] + [k]"
+          "exec" : "<[down] Hold> [up] + [k]"
         },
         {
           "name" : "Rolling Crystal Flash",
-          "exec" : "[chargeBack] [forward] + [p]"
+          "exec" : "<[back] Hold> [forward] + [p]"
         }
       ]
     },
