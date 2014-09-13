@@ -57,7 +57,7 @@
         },
         {
           "name" : "Hyakuretsukyaku",
-          "exec" : "<rapid [K]>"
+          "exec" : "<rapid [k]>"
         },
         {
           "name" : "Spinning Bird Kick",
@@ -114,7 +114,7 @@
         },
         {
           "name" : "Headlock Slam",
-          "exec" : "[360] + <Rapid [K]>"
+          "exec" : "[360] + <Rapid [k]>"
         },
         {
           "name" : "Double Neck Breaker",
