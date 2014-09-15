@@ -17,7 +17,8 @@
         },
         {
           "name" : "Tatsumaki Senpukyaku",
-          "exec" : "[qcb] + [k]"
+          "exec" : "[qcb] + [k]",
+          "note" : "AIR OK"
         }
       ]
     },
@@ -34,7 +35,8 @@
         },
         {
           "name" : "Tatsumaki Senpukyaku",
-          "exec" : "[qcb] + [k]"
+          "exec" : "[qcb] + [k]",
+          "note" : "AIR OK"
         },
         {
           "name" : "Shippu Jinraikyaku",
