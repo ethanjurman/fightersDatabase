@@ -134,7 +134,7 @@
         },
         {
           "name" : "Cosmic Smart",
-          "exec" : "[forward] + [highKick]"
+          "exec" : "[forward] + <High [k]>"
         },
         {
           "name" : "Izuna Drop",
