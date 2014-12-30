@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="javascripts/scale.fix.js"></script>
+    <script src="javascripts/main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <!--[if lt IE 9]>
@@ -21,60 +22,14 @@
       </header>
     <p> This page is used to create json for fighting games. </p>
     <input id="game" placeholder="Game Name"></input> <br>
-    <div id="moveTypes" class="inputArea">
-      Move Types
-      <button class="add-movetype" onclick="addMoveType()"> + </button>
-    </div>
 
-    <div id="characters" class="inputArea">
-      Characters
-      <button class="add-character" onclick="addCharacter()"> + </button>
-    </div>
-    <!-- scripts for page -->
-    <!-- this one is used for proper table resizing -->
-    <script type="text/javascript" charset="utf-8">
-      function addCharacter() {
-        var character = document.createElement("div");
-        character.className = "character";
-        var characterName = document.createElement("input");
-        characterName.placeholder = "Name";
-        character.appendChild(characterName);
-        addMove(character);
-        var parent = document.getElementById("characters");
-        parent.appendChild(character);
-      }
-      function addMoveType() {
-        var mType = document.createElement("div");
-        var mTypeInput = document.createElement("input");
-        mTypeInput.className = "moveType";
-        mTypeInput.placeholder = "Move Type";
-        mType.appendChild(mTypeInput);
-        var parent = document.getElementById("moveTypes");
-        parent.appendChild(mType);
-      }
-      function addMove(parent) {
-        var move = document.createElement("div");
-        move.className = "move";
-        var moveName = document.createElement("input");
-        moveName.placeholder = "Move Name"
-        var moveTypeSelect = document.createElement("select");
-        moveTypeSelect.onfocus = function(){
-          var op = moveTypeSelect.options;
-          var moveTypes = document.getElementsByClassName("moveType");
-          for(moveType in moveTypes){
-            op[parseInt(moveType)] = new Option(moveTypes[moveType].value, moveTypes[moveType].value)
-          }
-        }
-        var moveExec = document.createElement("div");
-        moveExec.className = "moveExec";
-        var mExecInput = document.createElement("input");
-        mExecInput.className = "exec";
-        mExecInput.placeholder = "Move Execution";
-        move.appendChild(moveName);
-        move.appendChild(moveTypeSelect);
-        move.appendChild(mExecInput);
-        parent.appendChild(move);
-      }
-    </script>
+    Move Types
+    <button class="add-movetype" onclick="addMoveType()"> + </button>
+    <div id="moveTypes" class="inputArea"></div>
+
+    Characters
+    <button class="add-character" onclick="addCharacter()"> + </button>
+    <div id="characters" class="inputArea"></div>
+
   </body>
 </html>
