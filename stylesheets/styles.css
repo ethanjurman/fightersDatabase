@@ -377,14 +377,18 @@ footer p + p {
 }
 
 .addMoveButton {
-  margin: 0px 9px 9px 9px;
-  height: 2em;
-  width: 400px;
+  float: right;
 }
 
 .nameInput {
   font-size: large;
 }
+
+.deleteMove {
+  float: right;
+  height: 3em;
+}
+
 input {
   display: block;
   width: 200px;
