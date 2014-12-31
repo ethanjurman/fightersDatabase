@@ -18,9 +18,16 @@ function addCharacter() {
   characterName.className = "nameInput"
   characterName.placeholder = "Name";
   character.appendChild(characterName);
-  addMove(character);
+  var moveAdder = document.createElement("button");
+  moveAdder.className = "addMoveButton";
+  moveAdder.onclick = function(){
+    addMove(character);
+  }
+  moveAdder.appendChild(document.createTextNode("add move"));
   var parent = document.getElementById("characters");
   parent.appendChild(character);
+  parent.appendChild(moveAdder);
+  parent.appendChild(document.createElement("hr"));
 }
 
 function addMoveType() {
@@ -62,8 +69,18 @@ function addMove(parent) {
   var mExecInput = document.createElement("input");
   mExecInput.className = "exec";
   mExecInput.placeholder = "Move Execution";
+  var moveDescription = document.createElement("div");
+  moveDescription.className = "moveDescription";
+  var moveNote = document.createElement("input");
+  moveNote.placeholder = "move notes (e.g. \"AIR OKAY\")";
+  var movePrereq = document.createElement("input");
+  movePrereq.placeholder = "prerequisites (seperated by \"&\")";
+  moveDescription.appendChild(moveNote);
+  moveDescription.appendChild(movePrereq);
+
   move.appendChild(moveName);
   move.appendChild(moveTypeSelect);
   move.appendChild(mExecInput);
   parent.appendChild(move);
+  parent.appendChild(moveDescription);
 }

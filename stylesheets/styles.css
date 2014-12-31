@@ -363,5 +363,29 @@ footer p + p {
   padding: 5px;
 }
 .move {
+  padding: 3px 3px 0px 6px;
+  display: flex;
+}
+.moveTypeDiv {
   padding: 3px;
+  display: flex;
+}
+
+.moveDescription {
+  padding: 0px 3px 3px 6px;
+  display: flex;
+}
+
+.addMoveButton {
+  margin: 0px 9px 9px 9px;
+  height: 2em;
+  width: 400px;
+}
+
+.nameInput {
+  font-size: large;
+}
+input {
+  display: block;
+  width: 200px;
 }
