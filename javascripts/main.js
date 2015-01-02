@@ -1,5 +1,6 @@
 function generateJSON() {
   var gameJSON = {};
+  gameJSON["game_name"] = document.getElementById("game").value;
   gameJSON["move_types"] = {};
   gameJSON["characters"] = [];
 
