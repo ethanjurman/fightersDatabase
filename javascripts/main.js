@@ -13,7 +13,7 @@ function generateJSON() {
     var c = {};
     c.name = htmlCharacter.getElementsByClassName("nameInput")[0].value;
     c.moves = [];
-    moves = htmlCharacter.getElementsByClassName("moveWrapping");
+    moves = htmlCharacter.getElementsByClassName("move");
     Array.prototype.forEach.call(moves, function(htmlMove){
       var moveObject = {};
       moveObject.name = htmlMove.getElementsByClassName("moveName")[0].value;
@@ -24,26 +24,8 @@ function generateJSON() {
     });
     gameJSON["characters"].push(c);
   });
+  document.getElementById("json-textarea").value = JSON.stringify(gameJSON);
   return gameJSON;
-}
-
-function addCharacter() {
-  var character = document.createElement("div");
-  character.className = "character";
-  var characterName = document.createElement("input");
-  characterName.className = "nameInput"
-  characterName.placeholder = "Name";
-  character.appendChild(characterName);
-  var moveAdder = document.createElement("button");
-  moveAdder.className = "addMoveButton";
-  moveAdder.onclick = function(){
-    addMove(character);
-  }
-  moveAdder.appendChild(document.createTextNode("add move"));
-  var parent = document.getElementById("characters");
-  parent.appendChild(moveAdder);
-  parent.appendChild(character);
-  parent.appendChild(document.createElement("hr"));
 }
 
 function addMoveType() {
@@ -63,25 +45,54 @@ function addMoveType() {
   colorOptions[2] = new Option("red", "red");
   mType.appendChild(mTypeColor)
 
+  var removeMoveType = document.createElement("button");
+  removeMoveType.innerHTML = "Delete";
+  removeMoveType.setAttribute("onclick","removeElement(event)");
+  mType.appendChild(removeMoveType);
+
   var parent = document.getElementById("moveTypes");
   parent.appendChild(mType);
 }
 
+function addCharacter() {
+  var character = document.createElement("div");
+  character.className = "character";
+  var characterName = document.createElement("input");
+  characterName.className = "nameInput"
+  characterName.placeholder = "Name";
+
+  var moveSection = document.createElement("div");
+  moveSection.className = "moveArea";
+  var moveAdder = document.createElement("button");
+  moveAdder.innerHTML = "Add Move";
+  moveAdder.setAttribute("onclick","moveAdder(event)");
+  var characterDuplicate = document.createElement("button");
+  characterDuplicate.innerHTML = "Duplicate Character";
+  characterDuplicate.setAttribute("onclick","characterDuplicate(event)");
+  var characterDelete = document.createElement("button");
+  characterDelete.innerHTML = "Delete Character";
+  characterDelete.setAttribute("onclick","removeElement(event)");
+
+  var parent = document.getElementById("characters");
+
+  character.appendChild(characterName);
+  character.appendChild(moveAdder);
+  character.appendChild(characterDuplicate);
+  character.appendChild(characterDelete);
+  character.appendChild(moveSection);
+  character.appendChild(document.createElement("hr"));
+  parent.appendChild(character);
+}
+
 function addMove(parent) {
   var move = document.createElement("div");
-  move.className = "move";
+  move.className = "moveMain";
   var moveName = document.createElement("input");
   moveName.className = "moveName";
   moveName.placeholder = "Move Name";
   var moveTypeSelect = document.createElement("select");
   moveTypeSelect.className = "moveType";
-  moveTypeSelect.onfocus = function(){
-    var op = moveTypeSelect.options;
-    var moveTypes = document.getElementsByClassName("moveTypeOption");
-    for(moveType in moveTypes){
-      op[parseInt(moveType)] = new Option(moveTypes[moveType].value, moveTypes[moveType].value)
-    }
-  }
+  moveTypeSelect.setAttribute("onfocus", "updateMoveSelection(event)");
   var mExecInput = document.createElement("input");
   mExecInput.className = "exec";
   mExecInput.placeholder = "Move Execution";
@@ -97,21 +108,56 @@ function addMove(parent) {
   moveDescription.appendChild(movePrereq);
 
   var removeMove = document.createElement("button");
-  removeMove.appendChild(document.createTextNode("Delete Move"));
-  removeMove.className = "deleteMove";
-  removeMove.onclick = function(){
-    moveWrapping.remove();
-  }
+  removeMove.innerHTML = "Delete<br>Move";
+  removeMove.className = "moveButton";
+  removeMove.setAttribute("onclick","removeElement(event)");
+
+  var duplicateMove = document.createElement("button");
+  duplicateMove.innerHTML = "Duplicate<br>Move";
+  duplicateMove.className = "moveButton";
+  duplicateMove.setAttribute("onclick","moveDuplicate(event)");
 
   // wrap all the move elements in one div
   var moveWrapping = document.createElement("div");
-  moveWrapping.className = "moveWrapping";
+  moveWrapping.className = "move";
 
   move.appendChild(moveName);
   move.appendChild(moveTypeSelect);
   move.appendChild(mExecInput);
   moveWrapping.appendChild(removeMove);
+  moveWrapping.appendChild(duplicateMove);
   moveWrapping.appendChild(move);
   moveWrapping.appendChild(moveDescription);
   parent.appendChild(moveWrapping);
+}
+
+
+function moveAdder(e){
+  var target = (e.target) ? e.target : e.srcElement;
+  addMove(target.parentNode.getElementsByClassName("moveArea")[0]);
+}
+
+function characterDuplicate(e){
+  var target = (e.target) ? e.target : e.srcElement;
+  document.getElementById("characters")
+    .appendChild(target.parentNode.cloneNode(true));
+}
+
+function moveDuplicate(e){
+  var target = (e.target) ? e.target : e.srcElement;
+  target.parentNode.parentNode.appendChild(target.parentNode.cloneNode(true));
+}
+
+function removeElement(e){
+  var target = (e.target) ? e.target : e.srcElement;
+  target.parentNode.remove();
+}
+
+function updateMoveSelection(e){
+  var target = (e.target) ? e.target : e.srcElement;
+  var op = target.options;
+  var moveTypes = document.getElementsByClassName("moveTypeOption");
+  for(moveType in moveTypes){
+    op[parseInt(moveType)] = new Option(moveTypes[moveType].value, moveTypes[moveType].value)
+  }
 }

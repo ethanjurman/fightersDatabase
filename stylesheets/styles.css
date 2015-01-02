@@ -362,7 +362,7 @@ footer p + p {
 .character {
   padding: 5px;
 }
-.move {
+.moveMain {
   padding: 3px 3px 0px 6px;
   display: flex;
 }
@@ -384,9 +384,17 @@ footer p + p {
   font-size: large;
 }
 
-.deleteMove {
+.moveButton {
   float: right;
   height: 3em;
+}
+
+.json-button {
+  width: 100%;
+}
+
+#json-textarea {
+  width: 100%;
 }
 
 input {
