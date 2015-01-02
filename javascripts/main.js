@@ -151,7 +151,7 @@ function moveDuplicate(e){
 
 function removeElement(e){
   var target = (e.target) ? e.target : e.srcElement;
-  target.parentNode.remove();
+  target.parentNode.parentNode.removeChild(target.parentNode);
 }
 
 function updateMoveSelection(e){
