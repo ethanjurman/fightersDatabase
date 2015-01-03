@@ -87,8 +87,8 @@ function loadExternalHtml(page, divClass, location){
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.open("GET",page,true);
   xmlhttp.send();
-  if (xmlhttp.readyState==4 && xmlhttp.status==200){
-    xmlhttp.onreadystatechange = function(){
+  xmlhttp.onreadystatechange = function(){
+    if (xmlhttp.readyState==4){
       loaded = document.createElement("div");
       loaded.className = divClass;
       loaded.innerHTML = xmlhttp.responseText;
