@@ -28,7 +28,7 @@ function generateJSON() {
   document.getElementById("json-textarea").value = JSON.stringify(gameJSON);
   return gameJSON;
 }
-
+/*
 function addMoveType() {
   var mType = document.createElement("div");
   mType.className = "moveTypeDiv"
@@ -131,7 +131,31 @@ function addMove(parent) {
   moveWrapping.appendChild(moveDescription);
   parent.appendChild(moveWrapping);
 }
+*/
 
+function addMoveType() {
+  loadExternalHtml(
+    "htmlTemplates/moveType.html",
+    "moveTypeDiv",
+    document.getElementById("moveTypes")
+  );
+}
+
+function addCharacter() {
+  loadExternalHtml(
+    "htmlTemplates/character.html",
+    "character",
+    document.getElementById("characters")
+  );
+}
+
+function addMove(parent) {
+  loadExternalHtml(
+    "htmlTemplates/move.html",
+    "move",
+    parent
+  );
+}
 
 function moveAdder(e){
   var target = (e.target) ? e.target : e.srcElement;
@@ -160,5 +184,17 @@ function updateMoveSelection(e){
   var moveTypes = document.getElementsByClassName("moveTypeOption");
   for(moveType in moveTypes){
     op[parseInt(moveType)] = new Option(moveTypes[moveType].value, moveTypes[moveType].value)
+  }
+}
+
+function loadExternalHtml(page, divClass, location){
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET",page,true);
+  xmlhttp.send();
+  xmlhttp.onreadystatechange = function(){
+    loaded = document.createElement("div");
+    loaded.className = divClass;
+    loaded.innerHTML = xmlhttp.responseText;
+    location.appendChild(loaded);
   }
 }
