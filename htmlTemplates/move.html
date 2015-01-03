@@ -1,0 +1,11 @@
+<button class="moveButton" onclick="removeElement(event)">Delete<br>Move</button>
+<button class="moveButton" onclick="moveDuplicate(event)">Duplicate<br>Move</button>
+<div class="moveMain">
+  <input class="moveName" placeholder="Move Name">
+  <select class="moveType" onfocus="updateMoveSelection(event)"></select>
+  <input class="exec" placeholder="Move Execution">
+</div>
+<div class="moveDescription">
+  <input class="prereq" placeholder="prerequisites (seperated by '&')">
+  <input class="note" placeholder="move notes (e.g. 'AIR OKAY')">
+</div>
