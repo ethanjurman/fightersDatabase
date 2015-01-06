@@ -41,7 +41,6 @@ function loadJSON() {
     addCharacter(
       {"nameInput":cJSON.name},
       function(cJSON){
-        console.log(cJSON);
         for (m in cJSON.moves){
           var move = cJSON.moves[m];
           // parentHTML provided by method that calls this function
@@ -130,13 +129,20 @@ function loadExternalHtml(page, divClass, location, loadValues, loadFunc, loadPa
       loaded.className = divClass;
       loaded.innerHTML = xhr.responseText;
       for (v in loadValues){
-        loaded.getElementsByClassName(v)[0].setAttribute("value",loadValues[v]);
+        var target = loaded.getElementsByClassName(v)[0];
+        target.setAttribute("value",loadValues[v]);
         Array.prototype.forEach.call(loaded.getElementsByTagName("option"),
           function(option){
             if (option.value == loadValues[v]){
               option.setAttribute("selected","selected");
             }
           });
+        if (target.tagName === "SELECT" && v === "moveType"){
+          op = target.getElementsByTagName("option")[0];
+          op.setAttribute("value",loadValues[v]);
+          op.innerHTML = loadValues[v];
+        }
+        // this is for characters, since moves need to be loaded with characters
         if (loadFunc !== undefined){
           loadParams.parentHTML = loaded; // +parent information to parameters
           loadFunc(loadParams)
