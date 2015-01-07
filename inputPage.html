@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, minimum-scale=0.1">
+    <title>Input Page</title>
+  <script src="javascripts/inputLoad.js"></script>
+  <link rel="stylesheet" href="stylesheets/input.css">
+  <link href="http://fonts.googleapis.com/css?family=Exo+2:600italic,700,800" rel="stylesheet" type="text/css">
+  </head>
+  <body onscroll="onScroll()" style="margin:0px;">
+    <input oninput="onChange()" id="input" class="top">
+    <div id="preview" class="top"></div>
+    <table style="padding-top:48px;" onclick="getButton(event)" id="kicks">
+      <td>
+        <img class="overlap" src="images\96_text_L.png">
+        <img command="lk" class="overlap" src="images\96_text_K.png">
+        <img src="images\96_kick_light.png">
+      </td>
+      <td>
+        <img class="overlap" src="images\96_text_M.png">
+        <img command="mk" class="overlap" src="images\96_text_K.png">
+        <img src="images\96_kick_medium.png">
+      </td>
+      <td>
+        <img class="overlap" src="images\96_text_H.png">
+        <img command="hk" class="overlap" src="images\96_text_K.png">
+        <img src="images\96_kick_heavy.png">
+      </td>
+      <td><img class="h48" command="2k" src="images\96_2xKick.png"></td>
+      <td><img class="h48" command="3k" src="images\96_3xKick.png"></td>
+    </table>
+    <table onclick="getButton(event)" id="punches">
+      <td>
+        <img class="overlap" src="images\96_text_L.png">
+        <img command="lp" class="overlap" src="images\96_text_P.png">
+        <img src="images\96_punch_light.png">
+      </td>
+      <td>
+        <img class="overlap" src="images\96_text_M.png">
+        <img command="mp"  class="overlap" src="images\96_text_P.png">
+        <img src="images\96_punch_medium.png">
+      </td>
+      <td>
+        <img class="overlap" src="images\96_text_H.png">
+        <img command="hp"  class="overlap" src="images\96_text_P.png">
+        <img src="images\96_punch_heavy.png">
+      </td>
+      <td><img class="h48" command="2p" src="images\96_2xPunch.png"></td>
+      <td><img class="h48" command="3p" src="images\96_3xPunch.png"></td>
+    </table>
+    <table id="inputs_yellow">
+      <tr onclick="getButton(event)">
+        <td><img command="214" src="images\96_input_yellow_qcb.png"></td>
+        <td><img command="h7" style="display:none" class="hold overlap" src="images\96_blank.png"
+          onmouseover="this.src='images\\96_hold.png'"
+          onmouseout="this.src='images\\96_blank.png'">
+        <img command="7" class="rotate7" src="images\96_input_yellow_arrow.png"></td>
+        <td><img command="h8" style="display:none" class="hold overlap" src="images\96_blank.png"
+          onmouseover="this.src='images\\96_hold.png'"
+          onmouseout="this.src='images\\96_blank.png'">
+        <img command="8" class="rotate8" src="images\96_input_yellow_arrow.png"></td>
+        <td><img command="h9" style="display:none" class="hold overlap" src="images\96_blank.png"
+          onmouseover="this.src='images\\96_hold.png'"
+          onmouseout="this.src='images\\96_blank.png'">
+        <img command="9" class="rotate9" src="images\96_input_yellow_arrow.png"></td>
+        <td><img command="236" src="images\96_input_yellow_qcf.png"></td>
+      </tr>
+      <tr>
+        <td onclick="getButton(event)"><img command="63214" src="images\96_input_yellow_hcb.png"></td>
+        <td onclick="getButton(event)"><img command="h4" style="display:none" class="hold overlap" src="images\96_blank.png"
+          onmouseover="this.src='images\\96_hold.png'"
+          onmouseout="this.src='images\\96_blank.png'">
+        <img command="4" class="rotate4" src="images\96_input_yellow_arrow.png"></td>
+        <td><img class="clickable" src="images\96_hold.png" onclick="holdHoverToggle(event)"></td>
+        <td onclick="getButton(event)"><img command="h6" style="display:none" class="hold overlap" src="images\96_blank.png"
+          onmouseover="this.src='images\\96_hold.png'"
+          onmouseout="this.src='images\\96_blank.png'">
+        <img command="6" class="rotate6" src="images\96_input_yellow_arrow.png"></td>
+        <td onclick="getButton(event)"><img command="41236" src="images\96_input_yellow_hcf.png"></td>
+      </tr>
+      <tr onclick="getButton(event)">
+        <td><img command="421" src="images\96_input_yellow_rdp.png"></td>
+        <td><img command="h1" style="display:none" class="hold overlap" src="images\96_blank.png"
+          onmouseover="this.src='images\\96_hold.png'"
+          onmouseout="this.src='images\\96_blank.png'">
+        <img command="1" class="rotate1" src="images\96_input_yellow_arrow.png"></td>
+        <td><img command="h2" style="display:none" class="hold overlap" src="images\96_blank.png"
+          onmouseover="this.src='images\\96_hold.png'"
+          onmouseout="this.src='images\\96_blank.png'">
+        <img command="2" class="rotate2" src="images\96_input_yellow_arrow.png"></td>
+        <td><img command="h3" style="display:none" class="hold overlap" src="images\96_blank.png"
+          onmouseover="this.src='images\\96_hold.png'"
+          onmouseout="this.src='images\\96_blank.png'">
+        <img command="3" class="rotate3" src="images\96_input_yellow_arrow.png"></td>
+        <td><img command="623" src="images\96_input_yellow_dp.png"></td>
+      </tr>
+    </table>
+
+    <hr width="50%">
+    <div id="colors">
+      <table>
+        <div style="text-align:center;">Toggle Button and Font Color</div>
+        <tr>
+          <td><img id="white" class="h48 clicked" onclick="filterButtons(event,'white')" src="images\96_button_white.png"></td>
+          <td><img id="gray" class="h48 clicked" onclick="filterButtons(event,'gray')" src="images\96_button_gray.png"></td>
+          <td><img id="black" class="h48 clicked" onclick="filterButtons(event,'black')" src="images\96_button_black.png"></td>
+          <td><img id="red" class="h48 clicked" onclick="filterButtons(event,'red')" src="images\96_button_red.png"></td>
+          <td><img id="yellow" class="h48 clicked" onclick="filterButtons(event,'yellow')" src="images\96_button_yellow.png"></td>
+          <td><img id="orange" class="h48 clicked" onclick="filterButtons(event,'orange')" src="images\96_button_orange.png"></td>
+          <td><img id="green" class="h48 clicked" onclick="filterButtons(event,'green')" src="images\96_button_green.png"></td>
+          <td><img id="teal" class="h48 clicked" onclick="filterButtons(event,'teal')" src="images\96_button_teal.png"></td>
+          <td><img id="purple" class="h48 clicked" onclick="filterButtons(event,'purple')" src="images\96_button_purple.png"></td>
+          <td><img id="blue" class="h48 clicked" onclick="filterButtons(event,'blue')" src="images\96_button_blue.png"></td>
+        </tr>
+      </table>
+      <table>
+        <td>
+          <button class="h48 clicked" onclick="filterButtons(event,'text_black')" style="width:100%;">Black Text</button>
+        </td>
+        <td>
+          <button class="h48 clicked" onclick="filterButtons(event,'text_white')" style="width:100%;">White Text</button>
+        </td>
+      </table>
+    </div>
+    <table onclick="getButton(event)" id="buttons"></table>
+    <script>
+      generateButtons();
+    </script>
+  </body>
+</html>
