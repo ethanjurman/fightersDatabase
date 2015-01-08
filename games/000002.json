@@ -1,0 +1,167 @@
+{
+  "game_name":"Guilty Gear Xrd -SIGN-",
+  "move_types":{
+    "special-moves":"green",
+    "overdrives":"blue",
+    "instant-kill":"red"
+  },
+  "characters":[
+    {
+      "name":"Ky Kiske",
+      "moves":[
+        {
+          "name":"Stun Edge",
+          "type":"special-moves",
+          "exec":"[236]+[orange-b-S]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Charged Stun Edge",
+          "type":"special-moves",
+          "exec":"[236]+[red-b-HS]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Air Stun Edge",
+          "type":"special-moves",
+          "exec":"[236]+[orange-b-S] or [red-b-HS]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Vapor Thrust",
+          "type":"special-moves",
+          "exec":"[623]+[red-b-HS]",
+          "note":"air ok",
+          "prereq":""
+        },
+        {
+          "name":"Stun Dipper",
+          "type":"special-moves",
+          "exec":"[236]+[green-b-K]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Greed Sever",
+          "type":"special-moves",
+          "exec":"[214]+[green-b-K]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Split Ciel",
+          "type":"special-moves",
+          "exec":"[236]+[purple-b-D]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Ride The Lightning",
+          "type":"overdrives",
+          "exec":"[hcb][right]+[red-b-HS]",
+          "note":"air ok",
+          "prereq":""
+        },
+        {
+          "name":"Sacred Edge",
+          "type":"overdrives",
+          "exec":"[236][236]+[teal-b-P]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Rising Force",
+          "type":"instant-kill",
+          "exec":"[236][236]+[red-b-HS]",
+          "note":"",
+          "prereq":"in instant kill mode"
+        }
+      ]
+    },
+    {
+      "name":"Axl Low",
+      "moves":[
+        {
+          "name":"Sickle Flash",
+          "type":"special-moves",
+          "exec":"[4][6]+[orange-b-S]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Melody Chain",
+          "type":"special-moves",
+          "exec":"[8] or [9]",
+          "note":"",
+          "prereq":"after sickle flash"
+        },
+        {
+          "name":"Spinning Chain Strike",
+          "type":"special-moves",
+          "exec":"[2] or [3]",
+          "note":"",
+          "prereq":"after sickle flash"
+        },
+        {
+          "name":"Artemis Hunter",
+          "type":"special-moves",
+          "exec":"[623]+[orange-b-S]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Spindle Spinner",
+          "type":"special-moves",
+          "exec":"[4][6]+[red-b-HS]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Heaven Can Wait",
+          "type":"special-moves",
+          "exec":"[214]+[teal-b-P] or [green-b-K]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Axl Bomber",
+          "type":"special-moves",
+          "exec":"[623]+[red-b-HS]",
+          "note":"in mid-air",
+          "prereq":""
+        },
+        {
+          "name":"Sparrowhawk Stance",
+          "type":"special-moves",
+          "exec":"[214]+[red-b-HS]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Sickle Storm",
+          "type":"overdrives",
+          "exec":"[236][63214]+[red-b-HS]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Shark Strike",
+          "type":"overdrives",
+          "exec":"[214][214]+[orange-b-S]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Amphora Conflagration",
+          "type":"instant-kill",
+          "exec":"[236][236]+[red-b-HS]",
+          "note":"",
+          "prereq":"in instant kill mode"
+        }
+      ]
+    }
+  ]
+}
