@@ -9,6 +9,7 @@ function makeImage(path, classes, location){
     return img;
   }
 }
+
 function mergeButtons(buttons, classes, command, location){
   // if classes isn't an array, make it one
   classes = classes || "";
@@ -17,8 +18,9 @@ function mergeButtons(buttons, classes, command, location){
       .map(String.prototype.valueOf,classes);
   }
   var span = document.createElement("span");
-  var first = makeImage(buttons.shift());
-  first.className = classes.shift();
+
+  var first = makeImage("images/96_blank.png");
+  first.className = classes[0];
   for(b in buttons){
     var i = makeImage(buttons[b]);
     i.className = classes[b];
@@ -153,71 +155,72 @@ function onChange(){
   }
 }
 
-function expandCommand(command){
-  var preview = document.getElementById("preview");
+function expandCommand(command, location){
+  var location = location || document.getElementById("preview");
   if (command.match(/(\[[012346789]\])/g)){
-    return makeImage("images/96_input_yellow_arrow.png","h48 rotate" + command[1],preview);
+    return makeImage("images/96_input_yellow_arrow.png","h48 rotate" + command[1],location);
   }
   if (command.match(/(\[h[012346789]\])/g)){
-    return mergeButtons(["images/96_input_yellow_arrow.png","images/96_hold.png"],["h48 rotate" + command[2],"h48"],"",preview);
+    return mergeButtons(["images/96_input_yellow_arrow.png","images/96_hold.png"],["h48 rotate" + command[2],"h48"],"",location);
   }
   if (command.match(/\[(white|gray|black|red|yellow|orange|green|teal|purple|blue)-(w|b)-([^\]]*)\]/g)){
     var matches = /\[(white|gray|black|red|yellow|orange|green|teal|purple|blue)-(w|b)-([^\]]*)\]/g.exec(command);
     return mergeButtons([
       "images/96_button_" + matches[1] + ".png",
-      "images/96_" + (matches[2] == "w" ? "white" : "black") + "_" + matches[3] + ".png"],"h48","",preview);
+      "images/96_" + (matches[2] == "w" ? "white" : "black") + "_" + matches[3] + ".png"],"h48","",location);
   }
   switch(command){
     case "[lk]":
-      mergeButtons(["images/96_kick_light.png","images/96_text_K.png","images/96_text_L.png"],"h48","",preview);
+      mergeButtons(["images/96_kick_light.png","images/96_text_K.png","images/96_text_L.png"],"h48","",location);
       break;
     case "[mk]":
-      mergeButtons(["images/96_kick_medium.png","images/96_text_K.png","images/96_text_M.png"],"h48","",preview);
+      mergeButtons(["images/96_kick_medium.png","images/96_text_K.png","images/96_text_M.png"],"h48","",location);
       break;
     case "[hk]":
-      mergeButtons(["images/96_kick_heavy.png","images/96_text_K.png","images/96_text_H.png"],"h48","",preview);
+      mergeButtons(["images/96_kick_heavy.png","images/96_text_K.png","images/96_text_H.png"],"h48","",location);
       break;
     case "[lp]":
-      mergeButtons(["images/96_punch_light.png","images/96_text_P.png","images/96_text_L.png"],"h48","",preview);
+      mergeButtons(["images/96_punch_light.png","images/96_text_P.png","images/96_text_L.png"],"h48","",location);
       break;
     case "[mp]":
-      mergeButtons(["images/96_punch_medium.png","images/96_text_P.png","images/96_text_M.png"],"h48","",preview);
+      mergeButtons(["images/96_punch_medium.png","images/96_text_P.png","images/96_text_M.png"],"h48","",location);
       break;
     case "[hp]":
-      mergeButtons(["images/96_punch_heavy.png","images/96_text_P.png","images/96_text_H.png"],"h48","",preview);
+      mergeButtons(["images/96_punch_heavy.png","images/96_text_P.png","images/96_text_H.png"],"h48","",location);
       break;
     case "[2k]":
-      makeImage("images/96_2xKick.png","h48",preview);
+      makeImage("images/96_2xKick.png","h48",location);
       break;
     case "[2p]":
-      makeImage("images/96_2xPunch.png","h48",preview);
+      makeImage("images/96_2xPunch.png","h48",location);
       break;
     case "[3k]":
-      makeImage("images/96_3xKick.png","h48",preview);
+      makeImage("images/96_3xKick.png","h48",location);
       break;
     case "[3p]":
-      makeImage("images/96_3xPunch.png","h48",preview);
+      makeImage("images/96_3xPunch.png","h48",location);
       break;
     case "[214]":
-      makeImage("images/96_input_yellow_qcb.png","h48",preview);
+      makeImage("images/96_input_yellow_qcb.png","h48",location);
       break;
     case "[63214]":
-      makeImage("images/96_input_yellow_hcb.png","h48",preview);
+      makeImage("images/96_input_yellow_hcb.png","h48",location);
       break;
     case "[421]":
-      makeImage("images/96_input_yellow_rdp.png","h48",preview);
+      makeImage("images/96_input_yellow_rdp.png","h48",location);
       break;
     case "[236]":
-      makeImage("images/96_input_yellow_qcf.png","h48",preview);
+      makeImage("images/96_input_yellow_qcf.png","h48",location);
       break;
     case "[41236]":
-      makeImage("images/96_input_yellow_hcf.png","h48",preview);
+      makeImage("images/96_input_yellow_hcf.png","h48",location);
       break;
     case "[623]":
-      makeImage("images/96_input_yellow_dp.png","h48",preview);
+      makeImage("images/96_input_yellow_dp.png","h48",location);
       break;
     default:
-      preview.appendChild(document.createTextNode(command));
+      console.log(location);
+      location.appendChild(document.createTextNode(command));
       break;
   }
 }

@@ -119,6 +119,31 @@ function updateMoveSelection(e){
   }
 }
 
+function loadMove(e){
+  var target = (e.target) ? e.target : e.srcElement;
+  var preview = target.parentNode.parentNode.getElementsByClassName("exec-preview")[0];
+
+  var inputField = document.getElementById("input");
+  while (preview.firstChild) {
+    preview.removeChild(preview.firstChild);
+  }
+  var str = target.value;
+  buffer = "";
+  var c = 0;
+  while (c != str.length){
+    buffer = buffer + str[c]
+    if (
+      (c == str.length -1) ||
+      (buffer.length > 0 && str[c + 1] == "[") ||
+      (str[c] == "]")){
+      // push buffer to expandCommand
+      expandCommand(buffer,preview);
+      buffer = ""
+    }
+    c++;
+  }
+}
+
 function loadExternalHtml(page, divClass, location, loadValues, loadFunc, loadParams){
   var xhr = new XMLHttpRequest();
   xhr.open("GET",page,true);
