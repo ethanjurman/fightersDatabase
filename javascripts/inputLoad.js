@@ -188,6 +188,12 @@ function expandCommand(command, location){
     case "[hp]":
       mergeButtons(["images/96_punch_heavy.png","images/96_text_P.png","images/96_text_H.png"],"h48","",location);
       break;
+    case "[k]":
+      makeImage("images/96_Kick.png","h48",location);
+      break;
+    case "[p]":
+      makeImage("images/96_Punch.png","h48",location);
+      break;
     case "[2k]":
       makeImage("images/96_2xKick.png","h48",location);
       break;
