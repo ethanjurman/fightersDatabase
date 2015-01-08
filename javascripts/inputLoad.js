@@ -10,6 +10,10 @@ function makeImage(path, classes, location){
   }
 }
 
+function makeButton(button, classes, location){
+  return mergeButtons([button],classes,"",location);
+}
+
 function mergeButtons(buttons, classes, command, location){
   // if classes isn't an array, make it one
   classes = classes || "";
@@ -17,18 +21,21 @@ function mergeButtons(buttons, classes, command, location){
     classes = Array.apply(null, new Array(buttons.length))
       .map(String.prototype.valueOf,classes);
   }
-  var span = document.createElement("span");
 
+  var span = document.createElement("span");
   var first = makeImage("images/96_blank.png");
   first.className = classes[0];
+  var double = false; // because there are sometimes images 2x the width
   for(b in buttons){
     var i = makeImage(buttons[b]);
+    double = double || (i.width > first.width);
     i.className = classes[b];
     i.setAttribute("command", command || "");
     i.setAttribute("style","position:absolute;z-index:1;")
     span.appendChild(i);
   }
   span.appendChild(first);
+  if (double) {span.appendChild(first.cloneNode())}
   if (location !== undefined){
     location.appendChild(span);
   } else {
@@ -158,7 +165,7 @@ function onChange(){
 function expandCommand(command, location){
   var location = location || document.getElementById("preview");
   if (command.match(/(\[[012346789]\])/g)){
-    return makeImage("images/96_input_yellow_arrow.png","h48 rotate" + command[1],location);
+    return makeButton("images/96_input_yellow_arrow.png","h48 rotate" + command[1],location);
   }
   if (command.match(/(\[h[012346789]\])/g)){
     return mergeButtons(["images/96_input_yellow_arrow.png","images/96_hold.png"],["h48 rotate" + command[2],"h48"],"",location);
@@ -189,46 +196,46 @@ function expandCommand(command, location){
       mergeButtons(["images/96_punch_heavy.png","images/96_text_P.png","images/96_text_H.png"],"h48","",location);
       break;
     case "[k]":
-      makeImage("images/96_Kick.png","h48",location);
+      makeButton("images/96_Kick.png","h48",location);
       break;
     case "[p]":
-      makeImage("images/96_Punch.png","h48",location);
+      makeButton("images/96_Punch.png","h48",location);
       break;
     case "[2k]":
-      makeImage("images/96_2xKick.png","h48",location);
+      makeButton("images/96_2xKick.png","h48",location);
       break;
     case "[2p]":
-      makeImage("images/96_2xPunch.png","h48",location);
+      makeButton("images/96_2xPunch.png","h48",location);
       break;
     case "[3k]":
-      makeImage("images/96_3xKick.png","h48",location);
+      makeButton("images/96_3xKick.png","h48",location);
       break;
     case "[3p]":
-      makeImage("images/96_3xPunch.png","h48",location);
+      makeButton("images/96_3xPunch.png","h48",location);
       break;
     case "[214]":
-      makeImage("images/96_input_yellow_qcb.png","h48",location);
+      makeButton("images/96_input_yellow_qcb.png","h48",location);
       break;
     case "[63214]":
-      makeImage("images/96_input_yellow_hcb.png","h48",location);
+      makeButton("images/96_input_yellow_hcb.png","h48",location);
       break;
     case "[421]":
-      makeImage("images/96_input_yellow_rdp.png","h48",location);
+      makeButton("images/96_input_yellow_rdp.png","h48",location);
       break;
     case "[236]":
-      makeImage("images/96_input_yellow_qcf.png","h48",location);
+      makeButton("images/96_input_yellow_qcf.png","h48",location);
       break;
     case "[41236]":
-      makeImage("images/96_input_yellow_hcf.png","h48",location);
+      makeButton("images/96_input_yellow_hcf.png","h48",location);
       break;
     case "[623]":
-      makeImage("images/96_input_yellow_dp.png","h48",location);
+      makeButton("images/96_input_yellow_dp.png","h48",location);
       break;
     case "[63214789]":
-      makeImage("images/96_input_yellow_fcf.png","h48",location);
+      makeButton("images/96_input_yellow_fcf.png","h48",location);
       break;
     case "[41236987]":
-      makeImage("images/96_input_yellow_fcb.png","h48",location);
+      makeButton("images/96_input_yellow_fcb.png","h48",location);
       break;
     default:
       console.log(location);
