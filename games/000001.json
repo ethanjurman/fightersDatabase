@@ -1,165 +1,243 @@
 {
-  "move_types" : {
-    "special" : "green",
-    "super-combo" : "red"
+  "game_name":"Street Fighter 3 Alpha",
+  "move_types":{
+    "special":"green",
+    "super-combo":"red"
   },
-  "characters" : [
+  "characters":[
     {
-      "name" : "Ryu",
-      "moves" : [
+      "name":"Ryu",
+      "moves":[
         {
-          "name" : "Hadouken",
-          "exec" : "[qcf] + [p]"
+          "name":"Hadouken",
+          "type":"special",
+          "exec":"[236][p]",
+          "note":"",
+          "prereq":""
         },
         {
-          "name" : "Shoryuken",
-          "exec" : "[dp] + [p]"
+          "name":"Shoryuken",
+          "type":"special",
+          "exec":"[623][p]",
+          "note":"",
+          "prereq":""
         },
         {
-          "name" : "Tatsumaki Senpukyaku",
-          "exec" : "[qcb] + [k]",
-          "note" : "AIR OK"
+          "name":"Tatsumaki Senpukyaku",
+          "type":"special",
+          "exec":"[214][k]",
+          "note":"AIR OK",
+          "prereq":""
         }
       ]
     },
     {
-      "name" : "Ken",
-      "moves" : [
+      "name":"Ken",
+      "moves":[
         {
-          "name" : "Hadouken",
-          "exec" : "[qcf] + [p]"
+          "name":"Hadouken",
+          "type":"special",
+          "exec":"[236][p]",
+          "note":"",
+          "prereq":""
         },
         {
-          "name" : "Shoryuken",
-          "exec" : "[dp] + [p]"
+          "name":"Shoryuken",
+          "type":"special",
+          "exec":"[623][p]",
+          "note":"",
+          "prereq":""
         },
         {
-          "name" : "Tatsumaki Senpukyaku",
-          "exec" : "[qcb] + [k]",
-          "note" : "AIR OK"
+          "name":"Tatsumaki Senpukyaku",
+          "type":"special",
+          "exec":"[214][k]",
+          "note":"AIR OK",
+          "prereq":""
         },
         {
-          "name" : "Shippu Jinraikyaku",
-          "exec" : "[qcb] [qcb] + [k]",
-          "prereq" : "a-ism",
-          "move_type" : "super-combo"
+          "name":"Shippu Jinraikyaku",
+          "type":"super-combo",
+          "exec":"[214][214][k]",
+          "note":"",
+          "prereq":"a-ism"
         }
       ]
     },
     {
-      "name" : "Chun-Li",
-      "moves" : [
+      "name":"Chun-Li",
+      "moves":[
         {
-          "name" : "Kiko-Ken",
-          "exec" : "[hcf] + [p]"
+          "name":"Kiko-Ken",
+          "type":"special",
+          "exec":"[41236][p]",
+          "note":"",
+          "prereq":""
         },
         {
-          "name" : "Tenshokyaku",
-          "exec" : "<[down]Hold> [up] + [k]"
+          "name":"Tenshokyaku",
+          "type":"special",
+          "exec":"[h2][8][k]",
+          "note":"",
+          "prereq":""
         },
         {
-          "name" : "Hyakuretsukyaku",
-          "exec" : "<rapid [k]>"
+          "name":"Hyakuretsukyaku",
+          "type":"special",
+          "exec":"<RAPID[k]>",
+          "note":"",
+          "prereq":""
         },
         {
-          "name" : "Spinning Bird Kick",
-          "exec" : "<[back]Hold> [forward] + [k]",
-          "prereq" : "x-ism"
+          "name":"Spinning Bird Kick",
+          "type":"special",
+          "exec":"[h4][6][k]",
+          "note":"",
+          "prereq":"x-ism"
         }
       ]
     },
     {
-      "name" : "Dhalsim",
-      "moves" : [
+      "name":"Dhalsim",
+      "moves":[
         {
-          "name" : "Yoga Fire",
-          "exec" : "[qcf] + [p]"
+          "name":"Yoga Fire",
+          "type":"special",
+          "exec":"[236][p]",
+          "note":"",
+          "prereq":""
         },
         {
-          "name" : "Yoga Flame",
-          "exec" : "[hcb] + [p]"
+          "name":"Yoga Flame",
+          "type":"special",
+          "exec":"[63214][p]",
+          "note":"",
+          "prereq":""
         },
         {
-          "name" : "Yoga Blast",
-          "exec" : "[hcb] + [k]"
+          "name":"Yoga Blast",
+          "type":"special",
+          "exec":"[63214][k]",
+          "note":"",
+          "prereq":""
         }
       ]
     },
     {
-      "name" : "Cody",
-      "moves" : [
+      "name":"Cody",
+      "moves":[
         {
-          "name" : "Criminal Upper",
-          "exec" : "[qcb] + [p]"
+          "name":"Criminal Upper",
+          "type":"special",
+          "exec":"[214][p]",
+          "note":"",
+          "prereq":""
         },
         {
-          "name" : "Raffian Kick",
-          "exec" : "[qcf] + [k]"
+          "name":"Raffian Kick",
+          "type":"special",
+          "exec":"[236][k]",
+          "note":"",
+          "prereq":""
         },
         {
-          "name" : "Cheap Shot",
-          "exec" : "[qcf] + [p]"
+          "name":"Cheap Shot",
+          "type":"special",
+          "exec":"[236][p]",
+          "note":"",
+          "prereq":""
         },
         {
-          "name" : "Bad Spray",
-          "exec" : "[back] [downBack] [down] + [p]",
-          "prereq" : "a-ism & v-ism"
+          "name":"Bad Spray",
+          "type":"special",
+          "exec":"[4][1][2][p]",
+          "note":"",
+          "prereq":"a-ism & v-ism"
         }
       ]
     },
     {
-      "name" : "R.Mika",
-      "moves" : [
+      "name":"R.Mika",
+      "moves":[
         {
-          "name" : "Flying Backdrop",
-          "exec" : "[qcb] + [p]"
+          "name":"Flying Backdrop",
+          "type":"special",
+          "exec":"[214][p]",
+          "note":"",
+          "prereq":""
         },
         {
-          "name" : "Headlock Slam",
-          "exec" : "[360] + <Rapid [k]>"
+          "name":"Headlock Slam",
+          "type":"special",
+          "exec":"[63214789]<Rapid [k]>",
+          "note":"",
+          "prereq":""
         },
         {
-          "name" : "Double Neck Breaker",
-          "exec" : "[360] + [p]"
+          "name":"Double Neck Breaker",
+          "type":"special",
+          "exec":"[63214789][p]",
+          "note":"",
+          "prereq":""
         }
       ]
     },
     {
-      "name" : "Vega",
-      "moves" : [
+      "name":"Vega",
+      "moves":[
         {
-          "name" : "Sankaku Tobi",
-          "exec" : "press in opposite direction",
-          "prereq" : "Jump against a wall"
+          "name":"Sankaku Tobi",
+          "type":"special",
+          "exec":"press in opposite direction",
+          "note":"",
+          "prereq":"Jump against a wall"
         },
         {
-          "name" : "Cosmic Smart",
-          "exec" : "[forward] + <High [k]>"
+          "name":"Cosmic Smart",
+          "type":"special",
+          "exec":"[6][hk]",
+          "note":"",
+          "prereq":""
         },
         {
-          "name" : "Izuna Drop",
-          "exec" : "<[down]Hold> [up] + [k]"
+          "name":"Izuna Drop",
+          "type":"special",
+          "exec":"[h2][8][k]",
+          "note":"",
+          "prereq":""
         },
         {
-          "name" : "Rolling Crystal Flash",
-          "exec" : "<[back]Hold> [forward] + [p]"
+          "name":"Rolling Crystal Flash",
+          "type":"special",
+          "exec":"[h4][6][p]",
+          "note":"",
+          "prereq":""
         }
       ]
     },
     {
-      "name" : "Karin",
-      "moves" : [
+      "name":"Karin",
+      "moves":[
         {
-          "name" : "Gurenken",
-          "exec" : "[qcf] + [p]"
+          "name":"Gurenken",
+          "type":"special",
+          "exec":"[236][p]",
+          "note":"",
+          "prereq":""
         },
         {
-          "name" : "Mujinkyaku",
-          "exec" : "[dp] + [k]"
+          "name":"Mujinkyaku",
+          "type":"special",
+          "exec":"[623][k]",
+          "note":"",
+          "prereq":""
         },
         {
-          "name" : "Houshou",
-          "exec" : "[dp] + [p]"
+          "name":"Houshou",
+          "type":"special",
+          "exec":"[623][p]",
+          "note":"",
+          "prereq":""
         }
       ]
     }
