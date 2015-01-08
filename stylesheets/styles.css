@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 html * {
   font-family: 'Exo 2', sans-serif;
-  text-transform: uppercase;
 }
 html {
   background: #6C7989;

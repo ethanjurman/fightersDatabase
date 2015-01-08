@@ -50,7 +50,15 @@ function loadJSON() {
             "exec":move.exec,
             "note":move.note,
             "prereq":move.prereq
-          });
+          }, function(p){
+            Array.prototype.forEach.call(document.getElementsByClassName("exec"),
+              function(node){
+                var el = {};
+                el.target = node;
+                console.log(el);
+                loadMove(el);
+            });
+          }, "");
         }
     }, cJSON);
   }
