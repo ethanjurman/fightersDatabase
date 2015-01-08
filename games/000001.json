@@ -60,7 +60,7 @@
           "type":"super-combo",
           "exec":"[214][214][k]",
           "note":"",
-          "prereq":"a-ism"
+          "prereq":"A-ISM"
         }
       ]
     },
@@ -84,7 +84,7 @@
         {
           "name":"Hyakuretsukyaku",
           "type":"special",
-          "exec":"<RAPID[k]>",
+          "exec":"<Rapid[k]>",
           "note":"",
           "prereq":""
         },
@@ -93,7 +93,7 @@
           "type":"special",
           "exec":"[h4][6][k]",
           "note":"",
-          "prereq":"x-ism"
+          "prereq":"X-ISM"
         }
       ]
     },
@@ -152,7 +152,7 @@
           "type":"special",
           "exec":"[4][1][2][p]",
           "note":"",
-          "prereq":"a-ism & v-ism"
+          "prereq":"A-ISM & V-ISM"
         }
       ]
     },
