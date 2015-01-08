@@ -1,14 +1,10 @@
 [
   {
-    "id" : "000000",
-    "name" : "mock game data (lots of character moves)"
-  },
-  {
     "id" : "000001",
-    "name" : "mock game data (steet fighter 3 alpha)"
+    "name" : "Street Fighter 3 Alpha (in progress)"
   },
   {
     "id" : "000002",
-    "name" : "Guilty Gear Xrd -SIGN-"
+    "name" : "Guilty Gear Xrd -SIGN- (in progress)"
   }
 ]
