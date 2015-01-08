@@ -224,6 +224,12 @@ function expandCommand(command, location){
     case "[623]":
       makeImage("images/96_input_yellow_dp.png","h48",location);
       break;
+    case "[63214789]":
+      makeImage("images/96_input_yellow_fcf.png","h48",location);
+      break;
+    case "[41236987]":
+      makeImage("images/96_input_yellow_fcb.png","h48",location);
+      break;
     default:
       console.log(location);
       location.appendChild(document.createTextNode(command));
