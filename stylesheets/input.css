@@ -37,6 +37,10 @@ span.custom-button>span>img {
   padding-top: 5px;
   height: 38px;
 }
+div.exec-preview>span.custom-button>span>img {
+  padding-top: 9px; /* padding needed an adjustment */
+  height: 38px;
+}
 #input {
   width:700px;
 }
