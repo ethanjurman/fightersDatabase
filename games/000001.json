@@ -1,242 +1,305 @@
 {
-  "game_name":"Street Fighter 3 Alpha",
+  "game_name":"",
   "move_types":{
     "special":"green",
-    "super-combo":"red"
+    "super-combo":"blue",
+    "max-super-combo":"red"
   },
   "characters":[
     {
-      "name":"Ryu",
+      "name":"Adon",
       "moves":[
         {
-          "name":"Hadouken",
-          "type":"special",
-          "exec":"[236][p]",
-          "note":"",
-          "prereq":""
-        },
-        {
-          "name":"Shoryuken",
-          "type":"special",
-          "exec":"[623][p]",
-          "note":"",
-          "prereq":""
-        },
-        {
-          "name":"Tatsumaki Senpukyaku",
-          "type":"special",
-          "exec":"[214][k]",
-          "note":"AIR OK",
-          "prereq":""
-        }
-      ]
-    },
-    {
-      "name":"Ken",
-      "moves":[
-        {
-          "name":"Hadouken",
-          "type":"special",
-          "exec":"[236][p]",
-          "note":"",
-          "prereq":""
-        },
-        {
-          "name":"Shoryuken",
-          "type":"special",
-          "exec":"[623][p]",
-          "note":"",
-          "prereq":""
-        },
-        {
-          "name":"Tatsumaki Senpukyaku",
-          "type":"special",
-          "exec":"[214][k]",
-          "note":"AIR OK",
-          "prereq":""
-        },
-        {
-          "name":"Shippu Jinraikyaku",
-          "type":"super-combo",
-          "exec":"[214][214][k]",
-          "note":"",
-          "prereq":"A-ISM"
-        }
-      ]
-    },
-    {
-      "name":"Chun-Li",
-      "moves":[
-        {
-          "name":"Kiko-Ken",
-          "type":"special",
-          "exec":"[41236][p]",
-          "note":"",
-          "prereq":""
-        },
-        {
-          "name":"Tenshokyaku",
-          "type":"special",
-          "exec":"[h2][8][k]",
-          "note":"",
-          "prereq":""
-        },
-        {
-          "name":"Hyakuretsukyaku",
-          "type":"special",
-          "exec":"<Rapid[k]>",
-          "note":"",
-          "prereq":""
-        },
-        {
-          "name":"Spinning Bird Kick",
-          "type":"special",
-          "exec":"[h4][6][k]",
-          "note":"",
-          "prereq":"X-ISM"
-        }
-      ]
-    },
-    {
-      "name":"Dhalsim",
-      "moves":[
-        {
-          "name":"Yoga Fire",
-          "type":"special",
-          "exec":"[236][p]",
-          "note":"",
-          "prereq":""
-        },
-        {
-          "name":"Yoga Flame",
-          "type":"special",
-          "exec":"[63214][p]",
-          "note":"",
-          "prereq":""
-        },
-        {
-          "name":"Yoga Blast",
-          "type":"special",
-          "exec":"[63214][k]",
-          "note":"",
-          "prereq":""
-        }
-      ]
-    },
-    {
-      "name":"Cody",
-      "moves":[
-        {
-          "name":"Criminal Upper",
-          "type":"special",
-          "exec":"[214][p]",
-          "note":"",
-          "prereq":""
-        },
-        {
-          "name":"Raffian Kick",
-          "type":"special",
-          "exec":"[236][k]",
-          "note":"",
-          "prereq":""
-        },
-        {
-          "name":"Cheap Shot",
-          "type":"special",
-          "exec":"[236][p]",
-          "note":"",
-          "prereq":""
-        },
-        {
-          "name":"Bad Spray",
-          "type":"special",
-          "exec":"[4][1][2][p]",
-          "note":"",
-          "prereq":"A-ISM & V-ISM"
-        }
-      ]
-    },
-    {
-      "name":"R.Mika",
-      "moves":[
-        {
-          "name":"Flying Backdrop",
-          "type":"special",
-          "exec":"[214][p]",
-          "note":"",
-          "prereq":""
-        },
-        {
-          "name":"Headlock Slam",
-          "type":"special",
-          "exec":"[63214789]<Rapid [k]>",
-          "note":"",
-          "prereq":""
-        },
-        {
-          "name":"Double Neck Breaker",
-          "type":"special",
-          "exec":"[63214789][p]",
-          "note":"",
-          "prereq":""
-        }
-      ]
-    },
-    {
-      "name":"Vega",
-      "moves":[
-        {
-          "name":"Sankaku Tobi",
-          "type":"special",
-          "exec":"press in opposite direction",
-          "note":"",
-          "prereq":"Jump against a wall"
-        },
-        {
-          "name":"Cosmic Smart",
-          "type":"special",
-          "exec":"[6][hk]",
-          "note":"",
-          "prereq":""
-        },
-        {
-          "name":"Izuna Drop",
-          "type":"special",
-          "exec":"[h2][8][k]",
-          "note":"",
-          "prereq":""
-        },
-        {
-          "name":"Rolling Crystal Flash",
-          "type":"special",
-          "exec":"[h4][6][p]",
-          "note":"",
-          "prereq":""
-        }
-      ]
-    },
-    {
-      "name":"Karin",
-      "moves":[
-        {
-          "name":"Gurenken",
-          "type":"special",
-          "exec":"[236][p]",
-          "note":"",
-          "prereq":""
-        },
-        {
-          "name":"Mujinkyaku",
+          "name":"Rising Jaguar",
           "type":"special",
           "exec":"[623][k]",
           "note":"",
           "prereq":""
         },
         {
-          "name":"Houshou",
+          "name":"Jaguar Kick",
+          "type":"special",
+          "exec":"<AIR[k]>",
+          "note":"",
+          "prereq":"X-ism"
+        },
+        {
+          "name":"Jaguar Kick",
+          "type":"special",
+          "exec":"[421][k]",
+          "note":"",
+          "prereq":"X-ism & V-ism"
+        },
+        {
+          "name":"Jaguar Tooth",
+          "type":"special",
+          "exec":"[63214][k]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Jaguar Varied Assault",
+          "type":"super-combo",
+          "exec":"[236][2][3][p]",
+          "note":"",
+          "prereq":"X-ism & A-ism"
+        },
+        {
+          "name":"Jaguar Revolver",
+          "type":"super-combo",
+          "exec":"[236][236][k]",
+          "note":"",
+          "prereq":"A-ism"
+        }
+      ]
+    },
+    {
+      "name":"Akuma",
+      "moves":[
+        {
+          "name":"Gohadoken",
+          "type":"special",
+          "exec":"[236][p]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Shakunetsu Hadoken",
+          "type":"special",
+          "exec":"[63214][p]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Zanku Hadoken",
+          "type":"special",
+          "exec":"<AIR[236][p]>",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Goshoryuken",
           "type":"special",
           "exec":"[623][p]",
           "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Tatsumaki Zankukyaku ",
+          "type":"special",
+          "exec":"[214][k]",
+          "note":"AIR OKAY",
+          "prereq":""
+        },
+        {
+          "name":"Hyakkishu",
+          "type":"special",
+          "exec":"[1][236][9][p]",
+          "note":"",
+          "prereq":"A-ism & V-ism"
+        },
+        {
+          "name":"Zenpou Tenshin",
+          "type":"special",
+          "exec":"[214][p]",
+          "note":"",
+          "prereq":"A-ism & V-ism"
+        },
+        {
+          "name":"Ashura Senku",
+          "type":"special",
+          "exec":"<[623]/[421]>+<[3p]/[3k]>",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Messatsu Gou Hado",
+          "type":"super-combo",
+          "exec":"[63214][63214][p]",
+          "note":"",
+          "prereq":"A-ism"
+        },
+        {
+          "name":"Messatsu Gou Shouryuu",
+          "type":"super-combo",
+          "exec":"[236][2][3][p]",
+          "note":"",
+          "prereq":"A-ism"
+        },
+        {
+          "name":"Tenma Gou Zankuu",
+          "type":"super-combo",
+          "exec":"<AIR[236][236][p]>",
+          "note":"",
+          "prereq":"A-ism"
+        },
+        {
+          "name":"Shun Goku Satsu",
+          "type":"max-super-combo",
+          "exec":"[lp][lp][6][lk][hp]",
+          "note":"",
+          "prereq":"X-ism & A-ism"
+        }
+      ]
+    },
+    {
+      "name":"Balrog",
+      "moves":[
+        {
+          "name":"Dash Straight",
+          "type":"special",
+          "exec":"[h4][6][p]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Dash Upper",
+          "type":"special",
+          "exec":"[h4][6][k]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Dash Ground Straight",
+          "type":"special",
+          "exec":"[h4][3][p]",
+          "note":"",
+          "prereq":"A-ism & V-ism"
+        },
+        {
+          "name":"Dash Ground Upper",
+          "type":"special",
+          "exec":"[h4][3][k]",
+          "note":"",
+          "prereq":"A-ism & V-ism"
+        },
+        {
+          "name":"Buffalo Head",
+          "type":"special",
+          "exec":"[h2][8][p]",
+          "note":"(A-ism Reversal Only)",
+          "prereq":"A-ism & V-ism"
+        },
+        {
+          "name":"Turn Punch",
+          "type":"special",
+          "exec":"<HOLD[3p]/[3k]>",
+          "note":"Can be Charged",
+          "prereq":""
+        },
+        {
+          "name":"Crazy Buffalo",
+          "type":"super-combo",
+          "exec":"[h4][6][4][6]<[p]/[k]>",
+          "note":"",
+          "prereq":"X-ism"
+        },
+        {
+          "name":"Crazy Buffalo",
+          "type":"super-combo",
+          "exec":"[h4][6][4][6][p]",
+          "note":"",
+          "prereq":"A-ism"
+        },
+        {
+          "name":"Gigaton Blow",
+          "type":"max-super-combo",
+          "exec":"[h4][6][4][6][k]",
+          "note":"",
+          "prereq":"A-ism"
+        }
+      ]
+    },
+    {
+      "name":"Birdie",
+      "moves":[
+        {
+          "name":"Bull Head",
+          "type":"special",
+          "exec":"[h4][6][p]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Bull Horn",
+          "type":"special",
+          "exec":"<HOLD[2p]/[2k]>",
+          "note":"Can be Charged",
+          "prereq":""
+        },
+        {
+          "name":"Murderer Chain",
+          "type":"special",
+          "exec":"[63214789][p]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Bandit Chain",
+          "type":"special",
+          "exec":"[63214789][k]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"The Birdie",
+          "type":"super-combo",
+          "exec":"[h4][6][4][6][p]",
+          "note":"",
+          "prereq":"X-ism & A-ism"
+        },
+        {
+          "name":"Bull Revenger",
+          "type":"super-combo",
+          "exec":"[236][2][3]<[p]/[k]>",
+          "note":"",
+          "prereq":""
+        }
+      ]
+    },
+    {
+      "name":"Blanka",
+      "moves":[
+        {
+          "name":"Electric Thunder",
+          "type":"special",
+          "exec":"<TAP[p]>",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Rolling Attack",
+          "type":"special",
+          "exec":"[h4][6][p]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Vertical Roll",
+          "type":"special",
+          "exec":"[h2][8][k]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Backstep Roll",
+          "type":"special",
+          "exec":"[h4][6][k]",
+          "note":"",
+          "prereq":""
+        },
+        {
+          "name":"Ground Shave Roll",
+          "type":"super-combo",
+          "exec":"[h4][6][4][6][p]",
+          "note":"[p] can be Charged",
+          "prereq":""
+        },
+        {
+          "name":"Tropical Hazard",
+          "type":"super-combo",
+          "exec":"[h1][3][1][9][k]",
+          "note":"Tap [p] or [k] for additional attacks",
           "prereq":""
         }
       ]
