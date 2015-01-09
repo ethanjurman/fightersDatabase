@@ -73,7 +73,7 @@ span.custom-button>span>img {
   letter-spacing: 0px;
   display: inline-flex; /* inline flex  works here, but should be fixed*/
   font-weight: normal;
-  font-family: impact;
+  font-family: 'Montserrat', sans-serif;
   padding: 0px 5px;
   background: white;
 }
