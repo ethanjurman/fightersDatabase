@@ -44,7 +44,7 @@ function loadJSON() {
         for (m in cJSON.moves){
           var move = cJSON.moves[m];
           // parentHTML provided by method that calls this function
-          addMove(cJSON.parentHTML, {
+          addMove(cJSON.parentHTML.getElementsByClassName("moveArea")[0], {
             "moveName":move.name,
             "moveType":move.type,
             "exec":move.exec,
@@ -127,21 +127,9 @@ function loadMove(e){
   while (preview.firstChild) {
     preview.removeChild(preview.firstChild);
   }
-  var str = target.value;
-  buffer = "";
-  var c = 0;
-  while (c != str.length){
-    buffer = buffer + str[c]
-    if (
-      (c == str.length -1) ||
-      (buffer.length > 0 && str[c + 1] == "[") ||
-      (str[c] == "]")){
-      // push buffer to expandCommand
-      expandCommand(buffer,preview);
-      buffer = ""
-    }
-    c++;
-  }
+  preview.innerHTML = target.value
+    .replace(/<([^>]*)>/g, '<span class="custom-button raised-button">$1</span>')
+    .replace(/\[([^\]]*)\]/g, this.expandCommand);
 }
 
 function loadExternalHtml(page, divClass, location, loadValues, loadFunc, loadParams){
