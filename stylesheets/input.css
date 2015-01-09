@@ -34,7 +34,8 @@ body {
   padding-top: 5px;
 }
 span.custom-button>span>img {
-  height: 1.2em;
+  padding-top: 5px;
+  height: 38px;
 }
 #input {
   width:700px;
@@ -71,11 +72,13 @@ span.custom-button>span>img {
   border-radius: 30px;
   border-style: solid;
   letter-spacing: 0px;
-  display: inline-flex; /* inline flex  works here, but should be fixed*/
+  display: inline;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
   padding: 0px 5px;
   background: white;
+  vertical-align: top;
+  font-size: 38px;
 }
 .raised-button {
   border-top-width: 1px;
