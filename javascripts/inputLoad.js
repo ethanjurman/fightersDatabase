@@ -142,104 +142,91 @@ function onScroll(){
 function onChange(){
   var inputField = document.getElementById("input");
   var preview = document.getElementById("preview");
+  // empty out content
   while (preview.firstChild) {
     preview.removeChild(preview.firstChild);
   }
-  str = inputField.value;
-  buffer = "";
-  var c = 0;
-  while (c != str.length){
-    buffer = buffer + str[c]
-    if (
-      (c == str.length -1) ||
-      (buffer.length > 0 && str[c + 1] == "[") ||
-      (str[c] == "]")){
-      // push buffer to expandCommand
-      expandCommand(buffer);
-      buffer = ""
-    }
-    c++;
-  }
+  preview.innerHTML = inputField.value
+    .replace(/<([^>]*)>/g, '<span class="custom-button raised-button">$1</span>')
+    .replace(/\[([^\]]*)\]/g, this.expandCommand);
 }
 
-function expandCommand(command, location){
-  var location = location || document.getElementById("preview");
-  if (command.match(/(\[[012346789]\])/g)){
-    return makeButton("images/96_input_yellow_arrow.png","h48 rotate" + command[1],location);
+function expandCommand(match){
+  var html = document.createElement("div");
+  // returns a string of a img tag holding the correct image from the input command
+  if (match.match(/(\[[012346789]\])/g)){
+    html.appendChild(makeButton("images/96_input_yellow_arrow.png","h48 rotate" + match[1]));
   }
-  if (command.match(/(\[h[012346789]\])/g)){
-    return mergeButtons(["images/96_input_yellow_arrow.png","images/96_hold.png"],["h48 rotate" + command[2],"h48"],"",location);
+  if (match.match(/(\[h[012346789]\])/g)){
+    html.appendChild(mergeButtons(["images/96_input_yellow_arrow.png","images/96_hold.png"],["h48 rotate" + match[2],"h48"]));
   }
-  if (command.match(/\[(white|gray|black|red|yellow|orange|green|teal|purple|blue)-(w|b)-([^\]]*)\]/g)){
-    var matches = /\[(white|gray|black|red|yellow|orange|green|teal|purple|blue)-(w|b)-([^\]]*)\]/g.exec(command);
-    return mergeButtons([
+  if (match.match(/\[(white|gray|black|red|yellow|orange|green|teal|purple|blue)-(w|b)-([^\]]*)\]/g)){
+    var matches = /\[(white|gray|black|red|yellow|orange|green|teal|purple|blue)-(w|b)-([^\]]*)\]/g.exec(match);
+    html.appendChild(mergeButtons([
       "images/96_button_" + matches[1] + ".png",
-      "images/96_" + (matches[2] == "w" ? "white" : "black") + "_" + matches[3] + ".png"],"h48","",location);
+      "images/96_" + (matches[2] == "w" ? "white" : "black") + "_" + matches[3] + ".png"],"h48"));
   }
-  switch(command){
+  switch(match){
     case "[lk]":
-      mergeButtons(["images/96_kick_light.png","images/96_text_K.png","images/96_text_L.png"],"h48","",location);
+      html.appendChild(mergeButtons(["images/96_kick_light.png","images/96_text_K.png","images/96_text_L.png"],"h48"));
       break;
     case "[mk]":
-      mergeButtons(["images/96_kick_medium.png","images/96_text_K.png","images/96_text_M.png"],"h48","",location);
+      html.appendChild(mergeButtons(["images/96_kick_medium.png","images/96_text_K.png","images/96_text_M.png"],"h48"));
       break;
     case "[hk]":
-      mergeButtons(["images/96_kick_heavy.png","images/96_text_K.png","images/96_text_H.png"],"h48","",location);
+      html.appendChild(mergeButtons(["images/96_kick_heavy.png","images/96_text_K.png","images/96_text_H.png"],"h48"));
       break;
     case "[lp]":
-      mergeButtons(["images/96_punch_light.png","images/96_text_P.png","images/96_text_L.png"],"h48","",location);
+      html.appendChild(mergeButtons(["images/96_punch_light.png","images/96_text_P.png","images/96_text_L.png"],"h48"));
       break;
     case "[mp]":
-      mergeButtons(["images/96_punch_medium.png","images/96_text_P.png","images/96_text_M.png"],"h48","",location);
+      html.appendChild(mergeButtons(["images/96_punch_medium.png","images/96_text_P.png","images/96_text_M.png"],"h48"));
       break;
     case "[hp]":
-      mergeButtons(["images/96_punch_heavy.png","images/96_text_P.png","images/96_text_H.png"],"h48","",location);
+      html.appendChild(mergeButtons(["images/96_punch_heavy.png","images/96_text_P.png","images/96_text_H.png"],"h48"));
       break;
     case "[k]":
-      makeButton("images/96_Kick.png","h48",location);
+      html.appendChild(makeButton("images/96_Kick.png","h48"));
       break;
     case "[p]":
-      makeButton("images/96_Punch.png","h48",location);
+      html.appendChild(makeButton("images/96_Punch.png","h48"));
       break;
     case "[2k]":
-      makeButton("images/96_2xKick.png","h48",location);
+      html.appendChild(makeButton("images/96_2xKick.png","h48"));
       break;
     case "[2p]":
-      makeButton("images/96_2xPunch.png","h48",location);
+      html.appendChild(makeButton("images/96_2xPunch.png","h48"));
       break;
     case "[3k]":
-      makeButton("images/96_3xKick.png","h48",location);
+      html.appendChild(makeButton("images/96_3xKick.png","h48"));
       break;
     case "[3p]":
-      makeButton("images/96_3xPunch.png","h48",location);
+      html.appendChild(makeButton("images/96_3xPunch.png","h48"));
       break;
     case "[214]":
-      makeButton("images/96_input_yellow_qcb.png","h48",location);
+      html.appendChild(makeButton("images/96_input_yellow_qcb.png","h48"));
       break;
     case "[63214]":
-      makeButton("images/96_input_yellow_hcb.png","h48",location);
+      html.appendChild(makeButton("images/96_input_yellow_hcb.png","h48"));
       break;
     case "[421]":
-      makeButton("images/96_input_yellow_rdp.png","h48",location);
+      html.appendChild(makeButton("images/96_input_yellow_rdp.png","h48"));
       break;
     case "[236]":
-      makeButton("images/96_input_yellow_qcf.png","h48",location);
+      html.appendChild(makeButton("images/96_input_yellow_qcf.png","h48"));
       break;
     case "[41236]":
-      makeButton("images/96_input_yellow_hcf.png","h48",location);
+      html.appendChild(makeButton("images/96_input_yellow_hcf.png","h48"));
       break;
     case "[623]":
-      makeButton("images/96_input_yellow_dp.png","h48",location);
+      html.appendChild(makeButton("images/96_input_yellow_dp.png","h48"));
       break;
     case "[63214789]":
-      makeButton("images/96_input_yellow_fcf.png","h48",location);
+      html.appendChild(makeButton("images/96_input_yellow_fcf.png","h48"));
       break;
     case "[41236987]":
-      makeButton("images/96_input_yellow_fcb.png","h48",location);
-      break;
-    default:
-      console.log(location);
-      location.appendChild(document.createTextNode(command));
+      html.appendChild(makeButton("images/96_input_yellow_fcb.png","h48"));
       break;
   }
+  return html.innerHTML;
 }

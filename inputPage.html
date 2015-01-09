@@ -10,7 +10,15 @@
   <body onscroll="onScroll()" style="margin:0px 48px;">
     <input oninput="onChange()" id="input" class="top">
     <div id="preview" class="top"></div>
-    <table style="padding-top:48px;" onclick="getButton(event)" id="kicks">
+    <p style="padding-top:96px;" >
+      This page is to try out and understand the sytax for creating simple fighter executions. <br>
+      Try clicking some of the elements below and they should appear in the text field to the top left,
+      and a preview field on the top right. <br>
+      If you place triangle brackets (i.e. "&lt;", "&gt;") around content
+      it should appear as a custom button. <br>
+      <i>(try &lt;Rapid[lk]&gt; for rapid low kick, or &lt;BLOCK&gt; for a custom block button)
+    </p>
+    <table onclick="getButton(event)" id="kicks">
       <td>
         <img class="overlap" src="images\96_text_L.png">
         <img command="lk" class="overlap" src="images\96_text_K.png">

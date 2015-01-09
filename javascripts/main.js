@@ -50,15 +50,7 @@ function loadJSON() {
             "exec":move.exec,
             "note":move.note,
             "prereq":move.prereq
-          }, function(p){
-            Array.prototype.forEach.call(document.getElementsByClassName("exec"),
-              function(node){
-                var el = {};
-                el.target = node;
-                console.log(el);
-                loadMove(el);
-            });
-          }, "");
+          });
         }
     }, cJSON);
   }
@@ -182,6 +174,9 @@ function loadExternalHtml(page, divClass, location, loadValues, loadFunc, loadPa
         }
       }
       location.appendChild(loaded);
+      var e = {};
+      e.target = location.children[location.children.length - 1].getElementsByClassName("exec")[0];
+      if (divClass == "move"){ loadMove(e); }
     }
   }
 }

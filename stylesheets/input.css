@@ -54,6 +54,20 @@ hr {
 .h48 {
   height: 48px;
 }
+.custom-button {
+  border-radius: 30px;
+  border-style: solid;
+  letter-spacing: 0px;
+  display: inline-block;
+  font-weight: normal;
+  font-family: impact;
+  padding: 0px 5px;
+  background: white;
+}
+.raised-button {
+  border-top-width: 1px;
+  border-bottom-width: 3px;
+}
 .rotate1 {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
