@@ -168,22 +168,22 @@ function expandCommand(match){
   }
   switch(match){
     case "[lk]":
-      html.appendChild(mergeButtons(["images/96_kick_light.png","images/96_text_K.png","images/96_text_L.png"],"h48"));
+      html.appendChild(mergeButtons(["images/96_kick_light.png"],"h48"));
       break;
     case "[mk]":
-      html.appendChild(mergeButtons(["images/96_kick_medium.png","images/96_text_K.png","images/96_text_M.png"],"h48"));
+      html.appendChild(mergeButtons(["images/96_kick_medium.png"],"h48"));
       break;
     case "[hk]":
-      html.appendChild(mergeButtons(["images/96_kick_heavy.png","images/96_text_K.png","images/96_text_H.png"],"h48"));
+      html.appendChild(mergeButtons(["images/96_kick_heavy.png"],"h48"));
       break;
     case "[lp]":
-      html.appendChild(mergeButtons(["images/96_punch_light.png","images/96_text_P.png","images/96_text_L.png"],"h48"));
+      html.appendChild(mergeButtons(["images/96_punch_light.png"],"h48"));
       break;
     case "[mp]":
-      html.appendChild(mergeButtons(["images/96_punch_medium.png","images/96_text_P.png","images/96_text_M.png"],"h48"));
+      html.appendChild(mergeButtons(["images/96_punch_medium.png"],"h48"));
       break;
     case "[hp]":
-      html.appendChild(mergeButtons(["images/96_punch_heavy.png","images/96_text_P.png","images/96_text_H.png"],"h48"));
+      html.appendChild(mergeButtons(["images/96_punch_heavy.png"],"h48"));
       break;
     case "[k]":
       html.appendChild(makeButton("images/96_Kick.png","h48"));
