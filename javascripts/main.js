@@ -22,6 +22,7 @@ function generateJSON() {
       moveObject.exec = htmlMove.getElementsByClassName("exec")[0].value;
       moveObject.note = htmlMove.getElementsByClassName("note")[0].value;
       moveObject.prereq = htmlMove.getElementsByClassName("prereq")[0].value;
+      moveObject.page = htmlMove.getElementsByClassName("page")[0].value;
       c.moves.push(moveObject);
     });
     gameJSON["characters"].push(c);
@@ -49,7 +50,8 @@ function loadJSON() {
             "moveType":move.type,
             "exec":move.exec,
             "note":move.note,
-            "prereq":move.prereq
+            "prereq":move.prereq,
+            "page":move.page
           });
         }
     }, cJSON);
@@ -102,12 +104,12 @@ function characterDuplicate(e){
 
 function moveDuplicate(e){
   var target = (e.target) ? e.target : e.srcElement;
-  target.parentNode.parentNode.appendChild(target.parentNode.cloneNode(true));
+  target.parentNode.parentNode.parentNode.appendChild(target.parentNode.parentNode.cloneNode(true));
 }
 
 function removeElement(e){
   var target = (e.target) ? e.target : e.srcElement;
-  target.parentNode.parentNode.removeChild(target.parentNode);
+  target.parentNode.parentNode.parentNode.removeChild(target.parentNode.parentNode);
 }
 
 function updateMoveSelection(e){
@@ -121,7 +123,7 @@ function updateMoveSelection(e){
 
 function loadMove(e){
   var target = (e.target) ? e.target : e.srcElement;
-  var preview = target.parentNode.parentNode.getElementsByClassName("exec-preview")[0];
+  var preview = target.parentNode.parentNode.parentNode.getElementsByClassName("move-exec")[0];
 
   var inputField = document.getElementById("input");
   while (preview.firstChild) {
@@ -132,7 +134,39 @@ function loadMove(e){
     .replace(/\[([^\]]*)\]/g, this.expandCommand);
 }
 
+function updateMove(e){
+  var target = (e.target) ? e.target : e.srcElement;
+  var preview = target.parentNode.parentNode.parentNode.getElementsByClassName("exec-preview")[0];
+  var source = function(search){
+    return target.parentNode.parentNode.parentNode.getElementsByClassName(search)[0].value;
+  }
+  oldClass = preview.getElementsByClassName("move-element")[0].className;
+  // setting move name
+  var pad = (source("moveName").match(/\|/g) || []).length * 20 - 10 + "px";
+  preview.getElementsByClassName("move-name")[0].innerHTML =
+    source("moveName")
+      .replace(/[|]*\-\>(.*)/,'<span><img class="after" style="margin-left:'+pad+'" src="images/96_after.png"/></span>$1');
+  // setting prereqs
+  preview.getElementsByClassName("move-prereqs")[0].innerHTML = "" ||
+    source("prereq").replace(/([^&]+)&?/g, '<td class="move-prereq">$1</td>');
+  preview.getElementsByClassName("move-exec")[0].colSpan = ([] || source("prereq").match(/([^&]+)&?/g)).length
+  // setting move note
+  preview.getElementsByClassName("move-note")[0].innerHTML = "" || source("note");
+  // setting move type
+  var types = {"Move Type":"green"};
+  Array.prototype.forEach.call(document.getElementsByClassName("moveTypeDiv"), function(e) {
+    types[e.children[0].value] = e.children[1].value;
+  });
+  preview.getElementsByClassName("move-element")[0].className =
+    "move-element " + types[source("moveType")];
+  if (oldClass != preview.getElementsByClassName("move-element")[0].className){
+    // refresh content if new css class
+    updateMove(e);
+  }
+}
+
 function loadExternalHtml(page, divClass, location, loadValues, loadFunc, loadParams){
+  console.log(location)
   var xhr = new XMLHttpRequest();
   xhr.open("GET",page,true);
   xhr.send();
@@ -164,7 +198,7 @@ function loadExternalHtml(page, divClass, location, loadValues, loadFunc, loadPa
       location.appendChild(loaded);
       var e = {};
       e.target = location.children[location.children.length - 1].getElementsByClassName("exec")[0];
-      if (divClass == "move"){ loadMove(e); }
+      if (divClass == "move"){ loadMove(e); updateMove(e); }
     }
   }
 }

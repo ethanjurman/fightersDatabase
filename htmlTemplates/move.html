@@ -1,14 +1,33 @@
-<button class="moveButton" onclick="removeElement(event)">Delete<br/>Move</button>
-<button class="moveButton" onclick="moveDuplicate(event)">Duplicate<br/>Move</button>
-<div class="moveMain">
-  <input class="moveName" placeholder="Move Name"/>
-  <select class="moveType" onfocus="updateMoveSelection(event)">
-    <option selected>Move Type</option>
-  </select>
-  <input oninput="loadMove(event)" class="exec" placeholder="Move Execution"/>
-</div>
-<div class="moveDescription">
-  <input class="prereq" placeholder="prerequisites (seperated by '&')"/>
-  <input class="note" placeholder="move notes (e.g. 'AIR OKAY')"/>
-</div>
-<div class="exec-preview"></div>
+<table style="width:100%">
+  <td style="width:50%">
+    <table class="exec-preview character-table">
+      <tr class="move-element">
+        <td><span class="move-name"></span>
+        <table style="float:right;">
+          <tr class="move-prereqs"></tr>
+          <tr>
+            <td colspan="1" class="move-exec"></td>
+          </tr>
+        </table>
+        <table>
+          <td class="move-note"></td>
+        </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+  <td style="width:50%">
+    <div class="move_info" oninput="updateMove(event)">
+      <input class="moveName" placeholder="Move Name (can place '->', '|->', '||->', etc...)"/>
+      <select onchange="updateMove(event)" class="moveType" onfocus="updateMoveSelection(event)">
+        <option selected="">Move Type</option>
+      </select>
+      <input oninput="loadMove(event)" class="exec" placeholder="Move Execution"/>
+      <input class="prereq" placeholder="style/ mode (seperated by '&')"/>
+      <input class="note" placeholder="move notes (e.g. 'AIR OKAY')"/>
+      <input class="page" placeholder="page ('Specials & Supers', 'Combos', etc...)"
+    </div>
+    <button class="moveButton" onclick="removeElement(event)">Delete Move</button>
+    <button class="moveButton" onclick="moveDuplicate(event)">Duplicate Move</button>
+  </td>
+</table>

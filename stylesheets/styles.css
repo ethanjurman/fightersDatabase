@@ -203,7 +203,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-p, ul, ol, table, pre, dl {
+p, ul, ol, pre, dl {
   margin: 0 0 20px;
 }
 
@@ -256,13 +256,7 @@ li pre {
   margin-left: -60px;
   padding-left: 60px;
 }
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
+th {
   text-align: left;
   padding: 5px 10px;
   border-bottom: 1px solid #aaa;
@@ -363,21 +357,13 @@ footer p + p {
   padding: 10px;
 }
 .character {
-  padding: 5px;
   border-bottom: 1px solid rgb(170, 170, 170);
 }
-.moveMain {
-  padding: 3px 3px 0px 6px;
-  display: flex;
+.move_info > input, .move_info > select {
+  width: 100%;
 }
 .moveTypeDiv {
   padding: 3px;
-  display: flex;
-}
-
-.moveDescription {
-  padding: 0px 3px 3px 6px;
-  display: flex;
 }
 
 .addMoveButton {
@@ -390,7 +376,7 @@ footer p + p {
 
 .moveButton {
   float: right;
-  height: 3em;
+  width: 50%;
 }
 
 .json-button {
@@ -409,9 +395,4 @@ input {
 .input_pane {
   width: 100%;
   height: 500px;
-}
-
-.exec-preview {
-  width: 100%;
-  font-size: 48px;
 }
