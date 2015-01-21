@@ -18,14 +18,16 @@
   </td>
   <td style="width:50%">
     <div class="move_info" oninput="updateMove(event)">
-      <input class="moveName" placeholder="Move Name (can place '->', '|->', '||->', etc...)"/>
-      <select onchange="updateMove(event)" class="moveType" onfocus="updateMoveSelection(event)">
+      <input class="moveName" placeholder="Move Name (before name: '\->', '\t\->', '\t...\t\->')"/>
+      <select onchange="updateMove(event)" class="moveType" onfocus="updateMoveSelection(event,'moveTypeOption')">
         <option selected="">Move Type</option>
       </select>
       <input oninput="loadMove(event)" class="exec" placeholder="Move Execution"/>
       <input class="prereq" placeholder="style/ mode (seperated by '&')"/>
       <input class="note" placeholder="move notes (e.g. 'AIR OKAY')"/>
-      <input class="page" placeholder="page ('Specials & Supers', 'Combos', etc...)"
+      <select class="movePage" onfocus="updateMoveSelection(event,'movePageOption')">
+        <option selected="">Page</option>
+      </select>
     </div>
     <button class="moveButton" onclick="removeElement(event)">Delete Move</button>
     <button class="moveButton" onclick="moveDuplicate(event)">Duplicate Move</button>

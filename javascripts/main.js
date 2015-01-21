@@ -58,10 +58,21 @@ function loadJSON() {
   }
 }
 
+function addPage(loadValues, loadFunc, loadParams) {
+  loadExternalHtml(
+    "htmlTemplates/page.html",
+    "page-div loaded-element",
+    document.getElementById("pages"),
+    loadValues,
+    loadFunc,
+    loadParams
+  );
+}
+
 function addMoveType(loadValues, loadFunc, loadParams) {
   loadExternalHtml(
     "htmlTemplates/moveType.html",
-    "moveTypeDiv",
+    "moveTypeDiv loaded-element",
     document.getElementById("moveTypes"),
     loadValues,
     loadFunc,
@@ -72,7 +83,7 @@ function addMoveType(loadValues, loadFunc, loadParams) {
 function addCharacter(loadValues, loadFunc, loadParams) {
   loadExternalHtml(
     "htmlTemplates/character.html",
-    "character",
+    "character loaded-element",
     document.getElementById("characters"),
     loadValues,
     loadFunc,
@@ -83,7 +94,7 @@ function addCharacter(loadValues, loadFunc, loadParams) {
 function addMove(parent, loadValues, loadFunc, loadParams) {
   loadExternalHtml(
     "htmlTemplates/move.html",
-    "move",
+    "move loaded-element",
     parent,
     loadValues,
     loadFunc,
@@ -104,18 +115,28 @@ function characterDuplicate(e){
 
 function moveDuplicate(e){
   var target = (e.target) ? e.target : e.srcElement;
-  target.parentNode.parentNode.parentNode.appendChild(target.parentNode.parentNode.cloneNode(true));
+  while (!target.classList.contains('loaded-element')){
+    target = target.parentNode;
+  }
+  target.parentNode.appendChild(target.cloneNode(true));
 }
 
 function removeElement(e){
   var target = (e.target) ? e.target : e.srcElement;
-  target.parentNode.parentNode.parentNode.removeChild(target.parentNode.parentNode);
+  while (!target.classList.contains('loaded-element')){
+    target = target.parentNode;
+  }
+  target.parentNode.removeChild(target);
 }
 
-function updateMoveSelection(e){
+function updateMoveSelection(e, option){
   var target = (e.target) ? e.target : e.srcElement;
   var op = target.options;
-  var moveTypes = document.getElementsByClassName("moveTypeOption");
+  // clear out old options
+  while (op[0] != undefined){
+    op[0] = undefined;
+  }
+  var moveTypes = document.getElementsByClassName(option);
   for(moveType in moveTypes){
     op[parseInt(moveType)] = new Option(moveTypes[moveType].value, moveTypes[moveType].value)
   }
@@ -142,10 +163,10 @@ function updateMove(e){
   }
   oldClass = preview.getElementsByClassName("move-element")[0].className;
   // setting move name
-  var pad = (source("moveName").match(/\|/g) || []).length * 20 - 10 + "px";
+  var pad = (source("moveName").match(/\\t/g) || []).length * 20 - 10 + "px";
   preview.getElementsByClassName("move-name")[0].innerHTML =
     source("moveName")
-      .replace(/[|]*\-\>(.*)/,'<span><img class="after" style="margin-left:'+pad+'" src="images/96_after.png"/></span>$1');
+      .replace(/[\\t]*\\\-\>(.*)/,'<span><img class="after" style="margin-left:'+pad+'" src="images/96_after.png"/></span>$1');
   // setting prereqs
   preview.getElementsByClassName("move-prereqs")[0].innerHTML = "" ||
     source("prereq").replace(/([^&]+)&?/g, '<td class="move-prereq">$1</td>');
@@ -165,10 +186,30 @@ function updateMove(e){
   }
 }
 
-function loadExternalHtml(page, divClass, location, loadValues, loadFunc, loadParams){
-  console.log(location)
+function selectMoveOptions(e, selector){
+  var target = (e.target) ? e.target : e.srcElement;
+  var c = target.classList.contains("movePageOption") ? "movePage" : "moveType";
+  test = function(e){
+    return e.getElementsByClassName(c)[0].value == target.value;
+  }
+  moves = Array.prototype.filter.call(document.getElementsByClassName("move"),test);
+}
+
+function updateMoveOptions(e, value){
+  var target = (e.target) ? e.target : e.srcElement;
+  var c = target.classList.contains("movePageOption") ? "movePage" : "moveType";
+  update = function(e){
+    var index = e.getElementsByClassName(c)[0].selectedIndex;
+    var option = e.getElementsByClassName(c)[0].options[index];
+    option.value = value;
+    option.innerHTML = value;
+  }
+  Array.prototype.map.call(moves,update);
+}
+
+function loadExternalHtml(htmlPage, divClass, location, loadValues, loadFunc, loadParams){
   var xhr = new XMLHttpRequest();
-  xhr.open("GET",page,true);
+  xhr.open("GET",htmlPage,true);
   xhr.send();
   xhr.onreadystatechange = function(){
     if (xhr.readyState==4){
@@ -198,7 +239,7 @@ function loadExternalHtml(page, divClass, location, loadValues, loadFunc, loadPa
       location.appendChild(loaded);
       var e = {};
       e.target = location.children[location.children.length - 1].getElementsByClassName("exec")[0];
-      if (divClass == "move"){ loadMove(e); updateMove(e); }
+      if (divClass == "move loaded-element"){ loadMove(e); updateMove(e); }
     }
   }
 }
