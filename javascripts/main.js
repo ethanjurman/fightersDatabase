@@ -3,6 +3,9 @@ function generateJSON() {
   gameJSON["game_name"] = document.getElementById("game").value;
   gameJSON["move_types"] = {};
   gameJSON["characters"] = [];
+  gameJSON["pages"] = Array.prototype.map.call(
+    document.getElementsByClassName("movePageOption"),
+    function(e){return e.value});
 
   var moveTypes = document.querySelectorAll(".moveTypeDiv")
   Array.prototype.forEach.call(moveTypes, function(e) {
@@ -22,7 +25,7 @@ function generateJSON() {
       moveObject.exec = htmlMove.getElementsByClassName("exec")[0].value;
       moveObject.note = htmlMove.getElementsByClassName("note")[0].value;
       moveObject.prereq = htmlMove.getElementsByClassName("prereq")[0].value;
-      moveObject.page = htmlMove.getElementsByClassName("page")[0].value;
+      moveObject.page = htmlMove.getElementsByClassName("movePage")[0].value;
       c.moves.push(moveObject);
     });
     gameJSON["characters"].push(c);
@@ -36,6 +39,9 @@ function loadJSON() {
   document.getElementById("game").value = gameJSON["game_name"];
   for (i in gameJSON["move_types"]){
     addMoveType({"moveTypeOption":i, "moveColor":gameJSON["move_types"][i]});
+  }
+  for (i in gameJSON["pages"]){
+    addPage({"movePageOption":gameJSON["pages"][i]});
   }
   for (i in gameJSON["characters"]){
     var cJSON = gameJSON["characters"][i];
@@ -51,13 +57,14 @@ function loadJSON() {
             "exec":move.exec,
             "note":move.note,
             "prereq":move.prereq,
-            "page":move.page
+            "movePage":move.page
           });
         }
     }, cJSON);
   }
 }
 
+// loadValues, loadFunc and loadParams are optional.
 function addPage(loadValues, loadFunc, loadParams) {
   loadExternalHtml(
     "htmlTemplates/page.html",
@@ -226,6 +233,11 @@ function loadExternalHtml(htmlPage, divClass, location, loadValues, loadFunc, lo
             }
           });
         if (target.tagName === "SELECT" && v === "moveType"){
+          op = target.getElementsByTagName("option")[0];
+          op.setAttribute("value",loadValues[v]);
+          op.innerHTML = loadValues[v];
+        }
+        if (target.tagName === "SELECT" && v === "movePage"){
           op = target.getElementsByTagName("option")[0];
           op.setAttribute("value",loadValues[v]);
           op.innerHTML = loadValues[v];
