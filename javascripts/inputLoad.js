@@ -90,12 +90,10 @@ function getCommand(e){
 function generateButtons(){
   area = document.getElementById("buttons");
   text =
-    ["A","B","C","D","E","F","G","H","I","J","K","L",
-    "M","N","O","P","Q","R","S","T","U","V","W","X",
-    "Y","Z","RT","RB","LT","LB","START","SELECT","COIN",
-    "RUN","JUMP","FIRE","R1","R2","L1","L2","HOME","PLUS",
-    "MINUS","HS","HP","MP","LP","HK","MK","LK","BACK",
-    "R-STICK","L-STICK"];
+    ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R",
+    "S","T","U","V","W","X","Y","Z","RT","RB","LT","LB","START","SELECT","COIN",
+    "RUN","BLOCK","JUMP","FIRE","FP","BP","FK","BK","R1","R2","L1","L2","HOME",
+    "PLUS","MINUS","HS","HP","MP","LP","HK","MK","LK","BACK","R-STICK","L-STICK"];
   colors =
     ["white","gray","black","red","yellow",
     "orange","green","teal","teal","purple","blue"];
