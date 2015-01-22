@@ -164,22 +164,25 @@ function loadMove(e){
 
 function updateMove(e){
   var target = (e.target) ? e.target : e.srcElement;
-  var preview = target.parentNode.parentNode.parentNode.getElementsByClassName("exec-preview")[0];
-  var source = function(search){
-    return target.parentNode.parentNode.parentNode.getElementsByClassName(search)[0].value;
+  while (!target.classList.contains('loaded-element')){
+    target = target.parentNode;
   }
-  oldClass = preview.getElementsByClassName("move-element")[0].className;
+  var preview = target.getElementsByClassName("exec-preview")[0];
+  var source = function(search){
+    return target.getElementsByClassName(search)[0].value;
+  }
+  var oldClass = preview.getElementsByClassName("move-element")[0].className;
   // setting move name
   var pad = (source("moveName").match(/\\t/g) || []).length * 20 - 10 + "px";
   preview.getElementsByClassName("move-name")[0].innerHTML =
     source("moveName")
       .replace(/[\\t]*\\\-\>(.*)/,'<span><img class="after" style="margin-left:'+pad+'" src="images/96_after.png"/></span>$1');
   // setting prereqs
-  preview.getElementsByClassName("move-prereqs")[0].innerHTML = "" ||
-    source("prereq").replace(/([^&]+)&?/g, '<td class="move-prereq">$1</td>');
-  preview.getElementsByClassName("move-exec")[0].colSpan = ([] || source("prereq").match(/([^&]+)&?/g)).length
+  preview.getElementsByClassName("move-prereqs")[0].innerHTML =
+    source("prereq").replace(/([^&]+)&?/g, '<td class="move-prereq">$1</td>') || "";
+  preview.getElementsByClassName("move-exec")[0].colSpan = (source("prereq").match(/([^&]+)&?/g) || []).length
   // setting move note
-  preview.getElementsByClassName("move-note")[0].innerHTML = "" || source("note");
+  preview.getElementsByClassName("move-note")[0].innerHTML = source("note") || "";
   // setting move type
   var types = {"Move Type":"green"};
   Array.prototype.forEach.call(document.getElementsByClassName("moveTypeDiv"), function(e) {
@@ -208,8 +211,10 @@ function updateMoveOptions(e, value){
   update = function(e){
     var index = e.getElementsByClassName(c)[0].selectedIndex;
     var option = e.getElementsByClassName(c)[0].options[index];
-    option.value = value;
-    option.innerHTML = value;
+    if (option != undefined){
+      option.value = value;
+      option.innerHTML = value;
+    }
   }
   Array.prototype.map.call(moves,update);
 }
