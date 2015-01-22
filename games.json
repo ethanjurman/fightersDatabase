@@ -1,10 +1,14 @@
 [
   {
     "id" : "000001",
-    "name" : "Street Fighter 3 Alpha (in progress)"
+    "name" : "Street Fighter 3 Alpha"
   },
   {
     "id" : "000002",
     "name" : "Guilty Gear Xrd -SIGN- (in progress)"
+  },
+  {
+    "id" : "000003",
+    "name" : "Killer Instinct (XBOX-ONE)"
   }
 ]
