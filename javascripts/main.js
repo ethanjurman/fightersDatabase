@@ -80,7 +80,15 @@ function addPageForMove(e) {
   }
   target = target.getElementsByClassName("move_info")[0];
   var pageSelect = target.getElementsByClassName("movePage")[0];
-  target.appendChild(pageSelect.cloneNode(true));
+  var span = document.createElement("span");
+  var page = pageSelect.cloneNode(true);
+  var deletePage = document.createElement("button");
+  deletePage.innerHTML = "-";
+  deletePage.onclick = function() {this.parentNode.parentNode.removeChild(this.parentNode);}
+  page.style.width = "90%";
+  span.appendChild(page);
+  span.appendChild(deletePage);
+  target.appendChild(span);
 }
 
 // loadValues, loadFunc and loadParams are optional.
@@ -226,8 +234,10 @@ function selectMoveOptions(e, selector){
 
 function updateMoveOptions(e, value){
   var target = (e.target) ? e.target : e.srcElement;
-  //transforming spaces to dashs
-  target.value = target.value.replace(/\s/,"-").toLowerCase();
+  //transforming spaces to dashs if moveType
+  if (target.classList.contains("moveTypeOption")){
+    target.value = target.value.replace(/\s/,"-").toLowerCase();
+  }
 
   // updating the move graphics
   var c = target.classList.contains("movePageOption") ? "movePage" : "moveType";
