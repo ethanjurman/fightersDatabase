@@ -25,13 +25,21 @@ function generateJSON() {
       moveObject.exec = htmlMove.getElementsByClassName("exec")[0].value;
       moveObject.note = htmlMove.getElementsByClassName("note")[0].value;
       moveObject.prereq = htmlMove.getElementsByClassName("prereq")[0].value;
-      moveObject.page = htmlMove.getElementsByClassName("movePage")[0].value;
+      moveObject.page = getPagesForMove(htmlMove);
       c.moves.push(moveObject);
     });
     gameJSON["characters"].push(c);
   });
   document.getElementById("json-textarea").value = JSON.stringify(gameJSON);
   return gameJSON;
+}
+
+function getPagesForMove(move){
+  var pages = Array.prototype.map.call( move.getElementsByClassName("movePage"),
+  function(e){
+    return e.value +";";
+  });
+  return pages.join("");
 }
 
 function loadJSON() {
@@ -62,6 +70,17 @@ function loadJSON() {
         }
     }, cJSON);
   }
+}
+
+// adding more than one page per move
+function addPageForMove(e) {
+  var target = (e.target) ? e.target : e.srcElement;
+  while (!target.classList.contains('loaded-element')){
+    target = target.parentNode;
+  }
+  target = target.getElementsByClassName("move_info")[0];
+  var pageSelect = target.getElementsByClassName("movePage")[0];
+  target.appendChild(pageSelect.cloneNode(true));
 }
 
 // loadValues, loadFunc and loadParams are optional.
@@ -207,6 +226,10 @@ function selectMoveOptions(e, selector){
 
 function updateMoveOptions(e, value){
   var target = (e.target) ? e.target : e.srcElement;
+  //transforming spaces to dashs
+  target.value = target.value.replace(/\s/,"-").toLowerCase();
+
+  // updating the move graphics
   var c = target.classList.contains("movePageOption") ? "movePage" : "moveType";
   update = function(e){
     var index = e.getElementsByClassName(c)[0].selectedIndex;
