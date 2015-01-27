@@ -147,6 +147,10 @@ function onChange(){
   preview.innerHTML = inputField.value
     .replace(/<([^>]*)>/g, '<span class="custom-button raised-button">$1</span>')
     .replace(/\[([^\]]*)\]/g, this.expandCommand);
+  var customButtons = preview.getElementsByTagName("canvas");
+  Array.prototype.forEach.call(customButtons, function(e){
+    customButton(e, e.getAttribute("data-bg"), e.getAttribute("data-font"), e.getAttribute("data-text"))
+  });
 }
 
 function expandCommand(match){
@@ -158,11 +162,16 @@ function expandCommand(match){
   if (match.match(/(\[h[012346789]\])/g)){
     html.appendChild(mergeButtons(["images/96_input_yellow_arrow.png","images/96_hold.png"],["h48 rotate" + match[2],"h48"]));
   }
-  if (match.match(/\[(white|gray|black|red|yellow|orange|green|teal|purple|blue)-(w|b)-([^\]]*)\]/g)){
-    var matches = /\[(white|gray|black|red|yellow|orange|green|teal|purple|blue)-(w|b)-([^\]]*)\]/g.exec(match);
-    html.appendChild(mergeButtons([
-      "images/96_button_" + matches[1] + ".png",
-      "images/96_" + (matches[2] == "w" ? "white" : "black") + "_" + matches[3] + ".png"],"h48"));
+  if (match.match(/\[([^\]]*)-([^\]]*)-([^\]]*)\]/g)){
+    var matches = /\[([^\]]*)-([^\]]*)-([^\]]*)\]/g.exec(match);
+    // canvas for making custom button
+    var canvas = document.createElement("canvas");
+    canvas.width = "48";
+    canvas.height = "48";
+    canvas.setAttribute("data-bg", matches[1]);
+    canvas.setAttribute("data-font", matches[2]);
+    canvas.setAttribute("data-text", matches[3]);
+    html.appendChild(canvas)
   }
   switch(match){
     case "[lk]":
@@ -227,4 +236,35 @@ function expandCommand(match){
       break;
   }
   return html.innerHTML;
+}
+
+function customButton(location, backgroundColor, fontColor, text){
+  var ctx = location.getContext("2d");
+  ctx.beginPath();
+  ctx.arc(24, 24, 21, 0, 2 * Math.PI);
+  ctx.lineWidth=5;
+  ctx.stroke();
+  ctx.fillStyle=backgroundColor;
+  ctx.fill();
+
+  ctx.fillStyle=fontColor;
+  ctx.textAlign="center";
+  if (text.length > 2){
+    if (~text.indexOf(" ")) {
+      // two lines, space to split words
+      t = text.split(" ");
+      ctx.font="14px Impact";
+      for (var i=0; i < t.length; i++){
+        ctx.fillText(t[i], 24, 22 + (i*14), 36);
+      }
+    } else {
+      // one line
+      ctx.font="24px Impact";
+      ctx.fillText(text, 24, 34, 36);
+    }
+  } else {
+    // one line, 2 or less characters
+    ctx.font="36px Impact";
+    ctx.fillText(text, 24, 38, 36);
+  }
 }
