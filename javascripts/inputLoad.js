@@ -114,7 +114,6 @@ function expandCommand(match){
     var svg = document.createElement("svg");
     svg.setAttribute("width", 48);
     svg.setAttribute("height", 48);
-    svg.setAttribute("viewbox", "0 0 32 32");
     customButtonSVG(svg, matches[1], matches[2], matches[3]);
     html.appendChild(svg);
   }
