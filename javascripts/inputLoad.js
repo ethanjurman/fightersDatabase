@@ -87,56 +87,6 @@ function getCommand(e){
   return e.getAttribute("command") || getCommand(e.children[0]);
 }
 
-function generateButtons(){
-  area = document.getElementById("buttons");
-  text =
-    ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R",
-    "S","T","U","V","W","X","Y","Z","RT","RB","LT","LB","START","SELECT","COIN",
-    "RUN","BLOCK","JUMP","FIRE","FP","BP","FK","BK","R1","R2","L1","L2","HOME",
-    "PLUS","MINUS","HS","HP","MP","LP","HK","MK","LK","BACK","R-STICK","L-STICK"];
-  colors =
-    ["white","gray","black","red","yellow",
-    "orange","green","teal","teal","purple","blue"];
-  fonts = ["black","white"];
-  buttons = {"white":[],"black":[]}
-  for (c in colors){
-    for (f in fonts){
-      for (t in text){
-        button = mergeButtons([
-          "images/96_button_" + colors[c] + ".png",
-          "images/96_" + fonts[f] + "_" + text[t] + ".png"],
-          "h48",
-          colors[c]+"-"+fonts[f][0]+"-"+text[t]);
-        button.className = colors[c];
-        buttons[fonts[f]].push(button);
-      }
-    }
-  }
-  for (f in fonts){
-    var count = 0;
-    var row = document.createElement("tr");
-    row.className = "text_" + fonts[f];
-    for (button in buttons[fonts[f]]){
-      if (button % 11 == 0 && button != 0){
-        area.appendChild(row);
-        row = document.createElement("tr");
-        row.className = "text_" + fonts[f];
-      }
-      row.appendChild(buttons[fonts[f]][button]);
-    }
-  }
-}
-
-function onScroll(){
-  var colorSel = document.getElementById("colors");
-  var scrollValue = document.body.scrollTop;
-  if (scrollValue > colorSel.offsetTop){
-    colorSel.style.position = "fixed";
-  } else {
-    colorSel.style.position = "initial";
-  }
-}
-
 function onChange(){
   var inputField = document.getElementById("input");
   var preview = document.getElementById("preview");
@@ -147,10 +97,6 @@ function onChange(){
   preview.innerHTML = inputField.value
     .replace(/<([^>]*)>/g, '<span class="custom-button raised-button">$1</span>')
     .replace(/\[([^\]]*)\]/g, this.expandCommand);
-  var customButtons = preview.getElementsByTagName("canvas");
-  Array.prototype.forEach.call(customButtons, function(e){
-    customButton(e, e.getAttribute("data-bg"), e.getAttribute("data-font"), e.getAttribute("data-text"))
-  });
 }
 
 function expandCommand(match){
@@ -164,14 +110,13 @@ function expandCommand(match){
   }
   if (match.match(/\[([^\]]*)-([^\]]*)-([^\]]*)\]/g)){
     var matches = /\[([^\]]*)-([^\]]*)-([^\]]*)\]/g.exec(match);
-    // canvas for making custom button
-    var canvas = document.createElement("canvas");
-    canvas.width = "48";
-    canvas.height = "48";
-    canvas.setAttribute("data-bg", matches[1]);
-    canvas.setAttribute("data-font", matches[2]);
-    canvas.setAttribute("data-text", matches[3]);
-    html.appendChild(canvas)
+    // svg for making custom button
+    var svg = document.createElement("svg");
+    svg.setAttribute("width", 48);
+    svg.setAttribute("height", 48);
+    svg.setAttribute("viewbox", "0 0 32 32");
+    customButtonSVG(svg, matches[1], matches[2], matches[3]);
+    html.appendChild(svg);
   }
   switch(match){
     case "[lk]":
@@ -238,33 +183,53 @@ function expandCommand(match){
   return html.innerHTML;
 }
 
-function customButton(location, backgroundColor, fontColor, text){
-  var ctx = location.getContext("2d");
-  ctx.beginPath();
-  ctx.arc(24, 24, 21, 0, 2 * Math.PI);
-  ctx.lineWidth=5;
-  ctx.stroke();
-  ctx.fillStyle=backgroundColor;
-  ctx.fill();
+function customButtonSVG(location, backgroundColor, fontColor, text){
+  var cir = document.createElement("circle");
+  // <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+  cir.setAttribute("cx",24);
+  cir.setAttribute("cy",24);
+  cir.setAttribute("r",21);
+  cir.setAttribute("stroke","black");
+  cir.setAttribute("stroke-width",4);
+  cir.setAttribute("fill",backgroundColor);
+  location.appendChild(cir);
 
-  ctx.fillStyle=fontColor;
-  ctx.textAlign="center";
+  setTextAttr = function(e, fontColor, y, fontSize, text){
+    if (text.length > 1){
+      e.setAttribute("textLength", 32);
+      e.setAttribute("lengthAdjust", "spacingAndGlyphs");
+    }
+    e.setAttribute("class","button-text");
+    e.setAttribute("y", 38);
+    e.setAttribute("text-anchor","middle");
+    e.setAttribute("x", 24);
+    e.setAttribute("font-family", "impact");
+    e.setAttribute("viewBox", "0 0 48 48");
+    e.setAttribute("fill",fontColor);
+    e.setAttribute("font-size",fontSize);
+    e.setAttribute("y",y);
+    e.innerHTML = text
+  }
+
   if (text.length > 2){
     if (~text.indexOf(" ")) {
       // two lines, space to split words
       t = text.split(" ");
-      ctx.font="14px Impact";
       for (var i=0; i < t.length; i++){
-        ctx.fillText(t[i], 24, 22 + (i*14), 36);
+        var textNode = document.createElement("text");
+        setTextAttr(textNode, fontColor, 22 + (i*14), 14, t[i]);
+        location.appendChild(textNode);
       }
     } else {
       // one line
-      ctx.font="24px Impact";
-      ctx.fillText(text, 24, 34, 36);
+      var textNode = document.createElement("text");
+      setTextAttr(textNode, fontColor, 34, 24, text);
+      location.appendChild(textNode);
     }
   } else {
     // one line, 2 or less characters
-    ctx.font="36px Impact";
-    ctx.fillText(text, 24, 38, 36);
+    var textNode = document.createElement("text");
+    setTextAttr(textNode, fontColor, 38, 36, text);
+    location.appendChild(textNode);
   }
 }

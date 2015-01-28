@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="stylesheets/input.css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat:700|Exo+2:600italic,700,800" rel="stylesheet" type="text/css">
   </head>
-  <body onscroll="onScroll()">
+  <body>
     <input id="input" class="top" oninput="onChange()" placeholder="Move Execution Here">
     <div id="preview" class="top"></div>
     <p style="padding-top:96px;" >
@@ -16,7 +16,9 @@
       and a preview field on the top right. <br>
       If you place triangle brackets (i.e. "&lt;", "&gt;") around content
       it should appear as a custom button. <br>
-      <i>(try &lt;Rapid[lk]&gt; for rapid low kick, or &lt;BLOCK&gt; for a custom block button)</i>
+      <i>(try &lt;Rapid[lk]&gt; for rapid low kick, or &lt;BLOCK&gt; for a custom block button)</i> <br><br>
+      Alternatively you can type <i> [white-black-A] </i> to make an A button, with a white background and a black
+      font. You can also use spaces to go to the next line (e.g. <i>[black-white-LOW KICK]</i>).
     </p>
     <table onclick="getButton(event)" id="kicks">
       <td>
@@ -100,36 +102,5 @@
         <td></td>
       </tr>
     </table>
-
-    <hr width="50%">
-    <div id="colors">
-      <table>
-        <div style="text-align:center;">Toggle Button and Font Color</div>
-        <tr>
-          <td><img id="white" class="h48 clicked" onclick="filterButtons(event,'white')" src="images\96_button_white.png"></td>
-          <td><img id="gray" class="h48 clicked" onclick="filterButtons(event,'gray')" src="images\96_button_gray.png"></td>
-          <td><img id="black" class="h48 clicked" onclick="filterButtons(event,'black')" src="images\96_button_black.png"></td>
-          <td><img id="red" class="h48 clicked" onclick="filterButtons(event,'red')" src="images\96_button_red.png"></td>
-          <td><img id="yellow" class="h48 clicked" onclick="filterButtons(event,'yellow')" src="images\96_button_yellow.png"></td>
-          <td><img id="orange" class="h48 clicked" onclick="filterButtons(event,'orange')" src="images\96_button_orange.png"></td>
-          <td><img id="green" class="h48 clicked" onclick="filterButtons(event,'green')" src="images\96_button_green.png"></td>
-          <td><img id="teal" class="h48 clicked" onclick="filterButtons(event,'teal')" src="images\96_button_teal.png"></td>
-          <td><img id="purple" class="h48 clicked" onclick="filterButtons(event,'purple')" src="images\96_button_purple.png"></td>
-          <td><img id="blue" class="h48 clicked" onclick="filterButtons(event,'blue')" src="images\96_button_blue.png"></td>
-        </tr>
-      </table>
-      <table>
-        <td>
-          <button class="h48 clicked" onclick="filterButtons(event,'text_black')" style="width:100%;">Black Text</button>
-        </td>
-        <td>
-          <button class="h48 clicked" onclick="filterButtons(event,'text_white')" style="width:100%;">White Text</button>
-        </td>
-      </table>
-    </div>
-    <table onclick="getButton(event)" id="buttons"></table>
-    <script>
-      generateButtons();
-    </script>
   </body>
 </html>
