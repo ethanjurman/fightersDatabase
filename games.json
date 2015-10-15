@@ -1,14 +1,26 @@
 [
+  { "value": "sfa3", "label": "Street Fighter Alpha 3" },
+  { "value": "whj", "label": "World Heroes Jet" },
   {
-    "id" : "000001",
-    "name" : "Street Fighter 3 Alpha"
+    "type": "group", "name": "Killer Instinct", "items": [
+      { "value": "ki", "label": "Killer Instinct" },
+      { "value": "ki2", "label": "Killer Instinct 2" },
+      { "value": "ki2013", "label": "Killer Instinct (2013)" }
+    ]
   },
   {
-    "id" : "000002",
-    "name" : "Guilty Gear Xrd -SIGN- (in progress)"
+    "type": "group", "name": "Guilty Gear", "items": [
+      { "value": "gg", "label": "Guilty Gear" },
+      { "value": "ggx", "label": "Guilty Gear X" },
+      { "value": "ggxx", "label": "Guilty Gear XX" },
+      { "value": "ggxrd", "label": "Guilty Gear Xrd" }
+    ]
   },
   {
-    "id" : "000003",
-    "name" : "Killer Instinct (XBOX-ONE)"
+    "type": "group", "name": "BlazBlue", "items": [
+      { "value": "bbct", "label": "BlazBlue: Calamity Trigger" },
+      { "value": "bbcs", "label": "BlazBlue: Continuum Shift" },
+      { "value": "bbcp", "label": "BlazBlue: Chrono Phantasma" }
+    ]
   }
 ]

@@ -5,28 +5,24 @@
 
 var express = require('express')
 var app = require('express')();
-var fs = require('fs');
 var http = require('http').Server(app);
+var cors = require('cors');
 
-app.use(express.static(__dirname + '/games/'));
+app.use(cors()); // I hate cors
 
-var games = fs.readFileSync('games.json');
-
+// Load the games json (has all the game names and groups)
 app.get("/games", function(req, res){
-  res.send(JSON.parse(games));
+  res.sendFile(__dirname + '/games.json');
 });
-//
-// app.get("/get/:position", function(req, res){
-//   if (board[req.params.position] == undefined) {
-//     board[req.params.position] = 0
-//   }
-//   res.send("" + board[req.params.position]);
-// });
-//
-// app.get("/get", function(req, res){
-//   res.send("" + JSON.stringify(board));
-// });
 
-http.listen(3000, function () {
-  console.log('Example app listening');
+// Load specific game from games folder
+app.get("/games/:game", function(req, res) {
+  res.sendFile(__dirname + '/games/' + req.params.game + '.json');
 });
+
+// Serve up them files!
+http.listen(9000, function () {
+  console.log('Up and running');
+});
+
+module.export = app;
